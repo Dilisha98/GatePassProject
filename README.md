@@ -2,6 +2,22 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## First You Need to Install npm
+### `npm install`
+
+## Next You Need to install React Dom
+### `npm install react react-dom`
+
+## After that You Need to install React Dom
+### `npm install react react-dom`
+
+## You Need to install Datepicker
+### `npm install react-datepicker --save`
+
+## You Need to install Bootstrap
+### `npm install bootstrap`
+
+
 ## Available Scripts
 
 In the project directory, you can run:
