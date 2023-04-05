@@ -4,6 +4,7 @@ import '../App.css';
 import React, { useState, useRef, useEffect } from "react";
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import { Transition } from 'react-transition-group';
 //import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 //import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
@@ -77,6 +78,21 @@ export default function New_Request() {
     values.splice(index, 1);
     setFields(values);
   };
+
+
+const [showForm, setShowForm] = useState(false);
+
+   const handleRadioReciverChange = (event) => {
+    setShowForm(event.target.value === 'Yes');
+  };
+
+  const fadeStyles = {
+    entering: { opacity: 0 },
+    entered: { opacity: 1, transition: 'opacity 150ms ease-in-out' },
+    exiting: { opacity: 1 },
+    exited: { opacity: 0, transition: 'opacity 150ms ease-in-out' },
+  };
+
 
   return (
     <>
@@ -303,6 +319,8 @@ export default function New_Request() {
                       name="group1"
                       type={type}
                       id={`inline-${type}-1`}
+                      value="Yes"
+                    onChange={handleRadioReciverChange}
                     />
                     <Form.Check
                       inline
@@ -310,6 +328,8 @@ export default function New_Request() {
                       name="group1"
                       type={type}
                       id={`inline-${type}-2`}
+                      value="No"
+                    onChange={handleRadioReciverChange}
                     />
                   </div>
                 ))}
@@ -319,10 +339,55 @@ export default function New_Request() {
       </form>
 
         </Container>
-
-        <Container className='btnContain'>
+        {!showForm && (<Container className='btnContain'>
         <button className='btnsubmit'>Submit</button>
         </Container>
+                  )}
+
+        <Transition in={showForm} timeout={300}>
+        {(state) => (
+          <div className='form-container' style={{ ...fadeStyles[state] }}>
+            <Container className='Contain'>
+              <div className='title'>Sender Details</div>
+              <form action="#">
+                <div className="user-details">
+                  <div className="input-div">
+                    <div>
+                      <span className="details">Name</span>
+                      <input type="text" name="" className="input" placeholder="Enter Service No Here"/>
+                    </div>
+                  </div>
+                  <div className="input-div">
+                    <div>
+                      <span className="details">Group</span>
+                      <input type="text" name="" className="input" placeholder="Enter Section Here"/>
+                    </div>
+                  </div>
+                  <div className="input-div">
+                    <div>
+                      <span className="details">Service No</span>
+                      <input type="text" name="" className="input" placeholder="Enter Section Here"/>
+                    </div>
+                  </div>
+                  <div className="input-div">
+                    <div>
+                      <span className="details">Contact No</span>
+                      <input type="text" name="" className="input" placeholder="Enter Section Here"/>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </Container>
+            {showForm && (
+                <Container className='btnContain'>
+                <button className='btnsubmit'>Submit</button>
+                </Container>
+              )}
+          </div>
+        )}
+      </Transition>
+
+        
     </>
   );
 }
