@@ -1,0 +1,82 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    
+    
+     
+    
+  }
+  
+  .Approval {
+    font-weight: bold;
+  }
+  
+  .Approval.Approve {
+    color: green;
+  }
+  
+  .Approval.Pending {
+    color: orange;
+  }
+  
+  .Approval.Rejected {
+    color: red;
+  }
+
+  td, th {
+    border: 2px solid white;
+    text-align: center;
+  
+  }
+
+  th {
+    background-color: rgba(3, 27, 78, 0.822);
+    padding: 8px;
+    color: white;
+   
+  }
+
+  td {
+
+    border-bottom: 0px;
+    padding: 2px;
+    
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+
+tr:first-child th:first-child {
+  border-top-left-radius: 15px;
+}
+tr:first-child th:last-child {
+  border-top-right-radius: 15px;
+}
+tr:last-child td:first-child {
+  border-bottom-left-radius: 15px;
+}
+tr:last-child td:last-child {
+  border-bottom-right-radius: 15px;
+}
+
+  button {
+
+  background-color: #03b621; /* Green */
+  border: none;
+  color: white;
+  padding: 6px 18px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  border-radius: 12px;
+  
+  
+
+  }
