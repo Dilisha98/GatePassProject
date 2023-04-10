@@ -11,21 +11,44 @@ import Dispatch from './pages/Dispatch';
 import Item_Tracker from './pages/Item_Tracker';
 import Admin from './pages/Admin';
 
+import Header from "./Components/Header";
+import MyApprovals from "./Components/TabComponents/MyApprovals";
+import ApprovedItemDetails from "./Components/AllTabs/ApprovedItemDetails";
+import PendingItemDetails from "./Components/AllTabs/PendingItemDetails";
+import RejectedItemDetails from "./Components/AllTabs/RejectedItemDetails";
+
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/New_Request" element={<NewRequestWithNavbar />} />
-        <Route path="/My_Request" element={<MyRequestWithNavbar />} />
-        <Route path="/My_Approval" element={<MyApprovalWithNavbar />} />
-        <Route path="/My_Receipts" element={<MyReceiptstWithNavbar />} />
-        <Route path="/Dispatch" element={<DispatvhWithNavbar />} />
-        <Route path="/Item_Tracker" element={<ItemTrackerWithNavbar />} />
-        <Route path="/Admin" element={<AdminWithNavbar />} />
-
-      </Routes>
-    </Router>
+    <div>
+        <div className="header" >
+            <Header/>
+        </div>
+        <div className="myapproval">
+            <Router>
+              <Routes>
+              <Route path="/" element={< MyApprovals/>}></Route>
+                <Route path="/ApprovedItemDetails" element={<ApprovedItemDetails />}></Route>
+                <Route path="/PendingItemDetails" element={<PendingItemDetails />}></Route>
+                <Route path="/RejectedItemDetails" element={<RejectedItemDetails />}></Route>
+                <Route path="/MyApprovals" element={<MyApprovals />}></Route>
+              </Routes>
+            </Router>
+          </div>
+        <div>
+          <Router>
+            <Routes>
+              <Route path="/" element={<Login />} />
+              <Route path="/New_Request" element={<NewRequestWithNavbar />} />
+              <Route path="/My_Request" element={<MyRequestWithNavbar />} />
+              <Route path="/My_Approval" element={<MyApprovalWithNavbar />} />
+              <Route path="/My_Receipts" element={<MyReceiptstWithNavbar />} />
+              <Route path="/Dispatch" element={<DispatvhWithNavbar />} />
+              <Route path="/Item_Tracker" element={<ItemTrackerWithNavbar />} />
+              <Route path="/Admin" element={<AdminWithNavbar />} />
+            </Routes>
+          </Router>
+        </div>
+    </div>
   );
 }
 
