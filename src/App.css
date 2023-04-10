@@ -7,6 +7,140 @@
 
 }
 
+/* My Approval Page Styles */
+.App {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .row {
+    display: flex;
+  }
+
+  .Ref {
+    flex: 5;
+    height: 32px;
+    background-color: #021166;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 2rem;
+    margin-right: 100px;
+  }
+
+  .itemdetails {
+    flex: 1;
+    height: 32px;
+    text-align: center;
+    background-color: #9fdbfc;
+    color: #000000;
+    border-radius: 2rem;
+    margin-left: 100px;
+  }
+
+  .imageframe{
+    width: 90%;
+    color: #021166 ;
+    border-radius: 2rem;
+    border: 1px solid #000000;
+    padding: 2.5rem;
+  }
+
+
+  .rawData1{
+    width: 90%;
+    color: #021166 ;
+    border-radius: 2rem;
+    border: 1px solid #000000;
+    margin: 2.5rem auto 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .rawDataItemSerial{
+    flex: 1;
+  }
+  .rawDataReturnable{
+    flex: 1;
+  }
+  .rawDataImage{
+    flex: 2;
+  }
+  .rawDataButton{
+    flex: 0.5;
+  }
+
+  .rawData{
+    width: 90%;
+    color: #021166;
+    border-radius: 2rem;
+    border: 1px solid #000000;
+    margin: 0.1rem auto 1.5rem;
+    padding: 1.5rem;
+  }
+  
+  /* Tab Container */
+  .myapprovals {
+    width: 80%;
+    height: auto;
+    border: 1px solid #000000;
+    margin: 0.5rem auto 1.5rem;
+    padding: 2rem 1rem;
+    color: #ffffff;
+    border-radius: 2rem;
+    @media (max-width: 769px) {
+      padding: 2rem 0;
+    }
+  
+  }
+  
+  /* Tab Navigation */
+  ul.nav {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    font-size: 20px;
+    justify-content: space-between;
+    border: 1px solid #39A2DB;
+    border-radius: 2rem;
+    @media (max-width: 768px) {
+      width: 90%;
+    }
+  }
+  ul.nav li {
+    width: 33.3%;
+    padding: 1rem;
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.7s;
+  }
+  ul.nav li:first-child {
+    border-bottom-left-radius: 2rem;
+    border-top-left-radius: 2rem;
+  }
+   
+  ul.nav li:last-child {
+    border-bottom-right-radius: 2rem;
+    border-top-right-radius: 2rem;
+  }
+  ul.nav li:hover {
+    background: rgba(0, 0, 0, 0.15);
+  }
+  ul.nav li.active {
+    background: #39A2DB;
+  }
+  
+  /* Tab Content Styles */
+  .TabContent {
+    font-size: 2rem;
+    text-align: center;
+  }
+/*My Approval Page Styles Finish */
+
 body{
     justify-content: center;
     background-color:rgb(243, 243, 243);
