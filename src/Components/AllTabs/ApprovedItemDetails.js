@@ -1,7 +1,7 @@
 import React from "react";
 import './Tabs.css'
 import { Navigate } from 'react-router-dom';
-import Logoslt from '../Images/SLT.png'
+
 
 const ApprovedItemDetails = () => {
   const [goToMyApprovals, setGoToMyApprovals] = React.useState(false);

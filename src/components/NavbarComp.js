@@ -30,7 +30,7 @@ export default function NavbarComp() {
           <Nav className='color mx-auto' >
             <Nav.Link href='/New_Request'className="me-4" >New Request</Nav.Link>
             <Nav.Link href='/My_Request' className="me-4">My Request</Nav.Link>
-            <Nav.Link href='/My_Approval' className="me-4">My Approval</Nav.Link>
+            <Nav.Link href='/MyApprovals' className="me-4">My Approval</Nav.Link>
             <Nav.Link href='/My_Receipts' className="me-4">My Receipt</Nav.Link>
             <Nav.Link href='/Dispatch' className="me-4">Dispatch</Nav.Link>
             <Nav.Link href='/Item_Tracker' className="me-4">Item Tracker</Nav.Link>

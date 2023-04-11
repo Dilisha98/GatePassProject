@@ -16,7 +16,7 @@ const MyApprovals = () => {
       </div>
       <div className="myapprovals">
         <div className='subMyapprovals'>
-          <h2>My Approvals</h2>
+        <div className='title'>Sender Details</div>
         </div>
         <ul className="nav">
           <TabNavItem title="Approved" id="approvedtab" activeTab={activeTab} setActiveTab={setActiveTab}/>
