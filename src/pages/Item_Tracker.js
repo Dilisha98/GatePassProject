@@ -54,3 +54,5 @@ export default function Item_Tracker() {
     </Container>
   )
 }
+
+/* This page's css file is in the src folder named Item_Tracker.css */
