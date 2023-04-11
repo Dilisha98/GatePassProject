@@ -12,10 +12,10 @@ import Item_Tracker from './pages/Item_Tracker';
 import Admin from './pages/Admin';
 
 
-import MyApprovals from "./components/TabComponents/MyApprovals";
-import ApprovedItemDetails from "./components/AllTabs/ApprovedItemDetails";
-import PendingItemDetails from "./components/AllTabs/PendingItemDetails";
-import RejectedItemDetails from "./components/AllTabs/RejectedItemDetails";
+import MyApprovals from "./pages/MyApprovals";
+import ApprovedItemDetails from "./pages/MyApprovalsAllTabs/ApprovedItemDetails";
+import PendingItemDetails from "./pages/MyApprovalsAllTabs/PendingItemDetails";
+import RejectedItemDetails from "./pages/MyApprovalsAllTabs/RejectedItemDetails";
 
 function App() {
   return (
