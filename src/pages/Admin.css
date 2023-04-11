@@ -1,0 +1,78 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 60px;
+
+  }
+
+  td, th {
+    border: 2px solid white;
+    text-align: center;
+
+  }
+
+  th {
+    background-color: rgba(3, 27, 78, 0.822);
+    padding: 8px;
+    color: white;
+
+  }
+
+  td {
+
+    border-bottom: 0px;
+    padding: 2px;
+
+  }
+  tr:first-child th:first-child {
+    border-top-left-radius: 15px;
+  }
+  tr:first-child th:last-child {
+    border-top-right-radius: 15px;
+  }
+  tr:last-child td:first-child {
+    border-bottom-left-radius: 15px;
+  }
+  tr:last-child td:last-child {
+    border-bottom-right-radius: 15px;
+  }
+
+  .edit{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px 10px;
+    gap: 10px;
+
+    position: absolute;
+    width: 57px;
+    height: 23px;
+    left: 831px;
+    top: 329px;
+
+    background: #50B748;
+    border-radius: 5px;
+  }
+
+ BiDotsHorizontalRounded{
+  box-sizing: border-box;
+
+/* Auto layout */
+
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 10px;
+gap: 10px;
+
+position: absolute;
+width: 34px;
+height: 28px;
+left: 828px;
+top: 297px;
+
+border: 1px solid #203D62;
+border-radius: 3px;
+ }
