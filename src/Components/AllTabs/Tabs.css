@@ -281,8 +281,7 @@ ul.nav li.active {
 /* -------------------------- Table Css -------------------- */
 
 td th {
-  border: 1px solid rgb(255, 255, 255);
-  text-align: center;
+  border: none;
 
 }
 
@@ -302,6 +301,10 @@ td {
 
 tr:nth-child(even) {
   background-color: #dddddd;
+}
+
+tr:nth-child(odd) {
+  background-color: #ffffff;
 }
 
 

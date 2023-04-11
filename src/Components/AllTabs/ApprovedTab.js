@@ -11,7 +11,7 @@ const ApprovedTab = () => {
   }
 
   return (
-    <Container className="ApprovedTab">
+    <Container className="">
       <form action="#">
     <table>
   <tr>
@@ -38,7 +38,6 @@ const ApprovedTab = () => {
     <td class="Approval">Rejected</td>
     <td><button class="button">View</button></td>
   </tr>
-  
 </table>
         </form>
     </Container>
