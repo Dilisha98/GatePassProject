@@ -1,6 +1,7 @@
 import React from "react";
 import { Navigate } from 'react-router-dom'
-import './Tabs.css'
+import './Tabs.css';
+import { Container } from "react-bootstrap";
 
 const RejectedTab = () => {
     const [goToRejectedItemDetails, setGoToRejectedItemDetails] = React.useState(false);
@@ -9,46 +10,38 @@ const RejectedTab = () => {
     return <Navigate to= "/RejectedItemDetails" />;
   }
   return (
-    <div className="RejectedTab">
-      <table class="table">
-        <thead>
-            <tr>
-                <th>Ref.No</th>
-                <th>Name</th>
-                <th>Created Date/Time</th>
-                <th>Full Details</th>
-            </tr>
-        </thead>
+    <Container className="">
+      <form action="#">
+    <table>
+  <tr className="Rejected-table">
+    <th>Ref.No</th>
+    <th>Name</th>
+    <th>In Location</th>
+    <th>Out Location</th>
+    <th>Created Date Time</th>
+    <th>Full details</th>
+  </tr>
+  <tr>
+    <td>9023455</td>
+    <td>Mahesh Theekshana</td>
+    <td>Colombo</td>
+    <td>Galle</td>
+    <td>2023-02-22 16:30:34</td>
+    <td><button onClick={() => {setGoToRejectedItemDetails(true);}} class="button">{""}View</button></td>
+  </tr>
+  <tr>
+    <td>3478455</td>
+    <td>Rangana Herath</td>
+    <td>Colombo</td>
+    <td>Kandy</td>
+    <td>2023-02-22 16:30:34</td>
     
-        <tbody>
-            <tr>
-                <td>111111</td>
-                <td>Deshan Chamil</td>
-                <td>2021.03.14  15.02.15</td>
-                <td><button onClick={() => {setGoToRejectedItemDetails(true);}} class="btn btn-danger">{""}View</button></td>
-            
-            </tr>
-            <tr>
-                <td>2222222</td>
-                <td>Menuka Perera</td>
-                <td>2022.04.24  08.10.55</td>
-                <td><button onClick={() => {setGoToRejectedItemDetails(true);}} class="btn btn-danger">{""}View</button></td>
-            </tr>
-            <tr>
-                <td>5555555</td>
-                <td>Yehan Kanishka</td>
-                <td>2023.08.24  20.20.05</td>
-                <td><button onClick={() => {setGoToRejectedItemDetails(true);}} class="btn btn-danger">{""}View</button></td>
-            </tr>
-            <tr>
-                <td>6666666</td>
-                <td>Kasun Lakmal</td>
-                <td>2020.08.24  20.20.05</td>
-                <td><button onClick={() => {setGoToRejectedItemDetails(true);}} class="btn btn-danger">{""}View</button></td>
-            </tr>
-        </tbody>
-    </table>
-    </div>
+    <td><button onClick={() => {setGoToRejectedItemDetails(true);}} class="button">{""}View</button></td>
+  </tr>
+  
+</table>
+        </form>
+    </Container>
   );
 };
 export default RejectedTab;

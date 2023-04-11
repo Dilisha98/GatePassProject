@@ -30,9 +30,9 @@ function App() {
               <Route path="/Item_Tracker" element={<ItemTrackerWithNavbar />} />
               <Route path="/Admin" element={<AdminWithNavbar />} />
 
-              <Route path="/ApprovedItemDetails" element={<ApprovedItemDetails />}/>
-                <Route path="/PendingItemDetails" element={<PendingItemDetails />}/>
-                <Route path="/RejectedItemDetails" element={<RejectedItemDetails />}/>
+              <Route path="/ApprovedItemDetails" element={<ApprovedItemDetailsWithNavbar />}/>
+                <Route path="/PendingItemDetails" element={<PendingItemDetailsWithNavbar />}/>
+                <Route path="/RejectedItemDetails" element={<RejectedItemDetailsWithNavbar />}/>
                 
               
             </Routes>
@@ -130,6 +130,48 @@ function AdminWithNavbar() {
   }
   return null;
 }
+
+
+function ApprovedItemDetailsWithNavbar () {
+  const currentPath = window.location.pathname;
+  if (currentPath === '/ApprovedItemDetails') {
+    return (
+      <>
+        <NavbarComp />
+        <ApprovedItemDetails/> 
+      </>
+    );
+  }
+  return null;
+}
+
+function PendingItemDetailsWithNavbar () {
+  const currentPath = window.location.pathname;
+  if (currentPath === '/PendingItemDetails') {
+    return (
+      <>
+        <NavbarComp />
+        <PendingItemDetails/> 
+      </>
+    );
+  }
+  return null;
+}
+
+
+function RejectedItemDetailsWithNavbar () {
+  const currentPath = window.location.pathname;
+  if (currentPath === '/RejectedItemDetails') {
+    return (
+      <>
+        <NavbarComp />
+        <RejectedItemDetails/> 
+      </>
+    );
+  }
+  return null;
+}
+
 
 
 export default App;

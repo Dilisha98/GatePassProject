@@ -1,6 +1,9 @@
 import React from "react";
 import './Tabs.css'
 import { Navigate } from 'react-router-dom';
+import { Container } from "react-bootstrap";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 const PendingItemDetails = () => {
   const [goToMyApprovals, setGoToMyApprovals] = React.useState(false);
@@ -10,120 +13,64 @@ const PendingItemDetails = () => {
   }
   return (
     
-    <div className="myapproval">
-      <div className='Welcome'>
+    <div>
+       <div className='Welcome'>
         <h4>Welcome Kithmal !!</h4>
-        <h7>Pages/My Approvals/Pending Item Details</h7>
+        <h7>Pages/ My Approval/ Item Details</h7>
       </div>
-      <div className="myapprovals">
-
-        <div className="headbutton">
-          <div className='subMyapprovals'>
-            <h2>My Approvals</h2>
-          </div>
-          <button onClick={() => {setGoToMyApprovals(true);}} class="btnBack btn-danger">{""}Back</button>
+    <Container className='ReciverContain'>
+      
+   <div className="title-and-button">
+        <div className='title'>My Approval</div>
+      <button onClick={() => {setGoToMyApprovals(true);}} className="backbtn"> <FontAwesomeIcon icon={faArrowLeft}/> Back</button>
+   </div>
+    
+         <div className='titleItem'>
+                <div className='ItemTitle'>Item Details</div>
+                <div className='RefNoTitle'>Ref.No :- 3423455</div>
         </div>
-
-        <div className="row">
-          <div className="itemdetails">
-            <h5>Item Details</h5>
-          </div>
-          <div className="Ref">
-            <h5>Ref.No: 222222222</h5>
-          </div>
-
-
-          <div className="rawData1">
-            <div className="row">
-              <div className="rawDataItemSerial">
-                <ol style={{ listStyleType: 'disc' }}>
-                  <li><strong>Item Name&nbsp; :-&nbsp;&nbsp;&nbsp;Laptop</strong></li>
-                </ol>
-                <ol style={{ listStyleType: 'none' }}>
-                  <li></li>
-                </ol>
-                <ol style={{ listStyleType: 'disc' }}>
-                  <li><strong>Serial No&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:-&nbsp;&nbsp;&nbsp;232345</strong></li>
-                </ol>
-              </div>
-              <div className="rawDataReturnable">
-                <ol style={{ listStyleType: 'disc' }}>
-                  <li><strong>Returnable&nbsp; :-&nbsp;&nbsp;&nbsp;No</strong></li>
-                </ol>
-              </div>
-              <div className="rawDataImage">
-                <div className="imageframe">
+          <form>
+            <div className='grid-even-columns'>
+                <div className='item-grid'>
+                          <div>
+                              <span class="formtitle">Item Name :- </span>
+                              <span class="">Laptop</span>
+                          </div>
+                          <div>
+                              <span class="formtitle">Serial No :- </span>
+                              <span class="">34235</span>
+                          </div>
+                          <div>
+                              <span class="formtitle">Returnable :- </span>
+                              <span class="">No</span>
+                          </div>
                 </div>
-              </div>
-              <div className="rawDataButton">
-              <td><button onClick={() => {setGoToMyApprovals(true);}} class="btnViewPhotos btn-danger">View Photos</button></td>
-            </div>
-          </div>
-        </div>
+                <div className='testimonials'>
 
-        <div className="rawData">
-          <div className="row">
-            <div className="rawDataItemSerial">
-              <ol style={{ listStyleType: 'disc' }}>
-              <li><strong>Item Name&nbsp; :-&nbsp;&nbsp;Chair</strong></li>
-              </ol>
-              <ol style={{ listStyleType: 'none' }}>
-                <li></li>
-              </ol>
-              <ol style={{ listStyleType: 'disc' }}>
-              <li><strong>Serial No&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:-&nbsp;&nbsp;&nbsp;884569</strong></li>
-              </ol>
+                        <div >
+                            <img className='itemleft'   src={require('./NightWing.jpg')} alt="imagee" />
+                        </div>
+                        <div class="slider-image">
+                            <img className='item' src={require('./Robin.jpg')} alt="Robin" />
+                        </div>
+                        <div class="slider-image">
+                              <img className='itemRight'  src={require('./batgirl.jpg')} alt="batgirl" />
+                        </div>
+                  
+                </div>
+                <div className=''>
+                  <button className='btnview'>View Photo</button>
+                </div>
             </div>
-            <div className="rawDataReturnable">
-              <ol style={{ listStyleType: 'disc' }}>
-                <li><strong>Returnable&nbsp; :-&nbsp;&nbsp;&nbsp;No</strong></li>
-              </ol>
-            </div>
-            <div className="rawDataImage">
-              <div className="imageframe">
-              </div>
-            </div>
-            <div className="rawDataButton">
-            <td><button onClick={() => {setGoToMyApprovals(true);}} class="btnViewPhotos btn-danger">View Photos</button></td>
-            </div>
-          </div>
-        </div>
 
-        <div className="rawData">
-          <div className="row">
-            <div className="rawDataItemSerial">
-              <ol style={{ listStyleType: 'disc' }}>
-              <li><strong>Item Name&nbsp; :-&nbsp;&nbsp;&nbsp;Table</strong></li>
-              </ol>
-              <ol style={{ listStyleType: 'none' }}>
-                <li></li>
-              </ol>
-              <ol style={{ listStyleType: 'disc' }}>
-              <li><strong>Serial No&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:-&nbsp;&nbsp;&nbsp;161655</strong></li>
-              </ol>
-            </div>
-            <div className="rawDataReturnable">
-              <ol style={{ listStyleType: 'disc' }}>
-                <li><strong>Returnable&nbsp; :-&nbsp;&nbsp;&nbsp;No</strong></li>
-              </ol>
-            </div>
-            <div className="rawDataImage">
-              <div className="imageframe">
-              </div>
-            </div>
-            <div className="rawDataButton">
-            <td><button onClick={() => {setGoToMyApprovals(true);}} class="btnViewPhotos btn-danger">View Photos</button></td>
-            </div>
-          </div>
-        </div> 
+           
+          </form>
+          <div className="approval-buttons-container">
+              <button className='Receivedbtn'>Approval</button>
+              <button className='Rejectbtn'>Reject</button>
         </div>
-
-        <div className="BtnApproveReject">
-          <button class="btnApprove btn-success mx-2">Approve</button><button class="btnReject btn-danger">Reject</button> 
-        </div>
-        
-      </div>
-    </div>
+    </Container>
+  </div>
   );
 };
  

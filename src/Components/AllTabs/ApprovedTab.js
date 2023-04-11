@@ -16,27 +16,37 @@ const ApprovedTab = () => {
     <table>
   <tr>
     <th>Ref.No</th>
+    <th>Name</th>
+    <th>In Location</th>
+    <th>Out Location</th>
     <th>Created Date Time</th>
-    <th>Approval</th>
     <th>Full details</th>
   </tr>
   <tr>
     <td>3423455</td>
+    <td>Niamal Suriyanayake</td>
+    <td>Colombo</td>
+    <td>Kandy</td>
     <td>2023-02-22 16:30:34</td>
-    <td class="Approval">Approve</td>
-    <td><button class="button">View</button></td>
+    <td><button onClick={() => {setGoToApprovedItemDetails(true);}} class="button">{""}View</button></td>
   </tr>
   <tr>
     <td>3423455</td>
+    <td>Mahela Jayawaradana</td>
+    <td>Colombo</td>
+    <td>Kandy</td>
     <td>2023-02-22 16:30:34</td>
-    <td class="Approval">Pending</td>
-    <td><button class="button">View</button></td>
+    
+    <td><button onClick={() => {setGoToApprovedItemDetails(true);}} class="button">{""}View</button></td>
   </tr>
   <tr>
     <td>3423455</td>
+    <td>Nuwan Kulasekara</td>
+    <td>kurunegala</td>
+    <td>Kandy</td>
     <td>2023-02-22 16:30:34</td>
-    <td class="Approval">Rejected</td>
-    <td><button class="button">View</button></td>
+    
+    <td><button onClick={() => {setGoToApprovedItemDetails(true);}} class="button">{""}View</button></td>
   </tr>
 </table>
         </form>
