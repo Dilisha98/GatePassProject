@@ -33,8 +33,7 @@ function App() {
               <Route path="/ApprovedItemDetails" element={<ApprovedItemDetailsWithNavbar />}/>
                 <Route path="/PendingItemDetails" element={<PendingItemDetailsWithNavbar />}/>
                 <Route path="/RejectedItemDetails" element={<RejectedItemDetailsWithNavbar />}/>
-                
-              
+                             
             </Routes>
           </Router>
         
