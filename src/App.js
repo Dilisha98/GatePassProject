@@ -6,7 +6,7 @@ import Login from './pages/login';
 import NavbarComp from './components/NavbarComp';
 import My_Request from './pages/My_Request';
 //import My_Approval from './pages/My_Approval';
-import My_Receipts from './pages/My_Receipts';
+import My_Receipts from './pages/My-Receipts/My_Receipts';
 import Dispatch from './pages/Dispatch';
 import Item_Tracker from './pages/Item_Tracker';
 import Admin from './pages/Admin';
@@ -16,6 +16,7 @@ import MyApprovals from "./pages/MyApprovals";
 import ApprovedItemDetails from "./pages/MyApprovalsAllTabs/ApprovedItemDetails";
 import PendingItemDetails from "./pages/MyApprovalsAllTabs/PendingItemDetails";
 import RejectedItemDetails from "./pages/MyApprovalsAllTabs/RejectedItemDetails";
+import Receipt_Details from "./pages/My-Receipts/Receipt_Details"
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
               <Route path="/ApprovedItemDetails" element={<ApprovedItemDetailsWithNavbar />}/>
                 <Route path="/PendingItemDetails" element={<PendingItemDetailsWithNavbar />}/>
                 <Route path="/RejectedItemDetails" element={<RejectedItemDetailsWithNavbar />}/>
+                <Route path="/Receipt_Details" element={<Receipt_Details />}/>
                              
             </Routes>
           </Router>
