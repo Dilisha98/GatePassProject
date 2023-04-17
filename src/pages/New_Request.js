@@ -97,7 +97,10 @@ const [showForm, setShowForm] = useState(false);
   return (
     <>
     {/*------------------- This is a Sender Details form-------------------*/}
-
+    <div className='Welcome'>
+        <h4>Welcome Admin</h4>
+        <h7>Pages/ New Request</h7>
+      </div>
         <Container className='Contain'>
         <div className='title'>Sender Details</div>
         <form action="#">
@@ -302,13 +305,13 @@ const [showForm, setShowForm] = useState(false);
         </Container>
 
                   {/*------------------- If Reciver Available -------------------*/}
-        <Container className='ReciverContain'>
+        <Container className=''>
         
-        <form action="#" className='ml-2'>
+        <form action="#" className='ReciverContain ml-2'>
           <div className="user-details">
             <div className="row">
               <div className="">
-                <span className="">If Receiver Available</span>
+                <span className="Receviertitle">If Receiver Available</span>
               </div>
               <div className='radioselect'>
                 {['radio'].map((type) => (
@@ -338,7 +341,7 @@ const [showForm, setShowForm] = useState(false);
           </div>
       </form>
 
-        </Container>
+   </Container>
         {!showForm && (<Container className='btnContain'>
         <button className='btnsubmit'>Submit</button>
         </Container>

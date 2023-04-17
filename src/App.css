@@ -14,6 +14,10 @@ body{
     justify-content: center;
     background-color:rgb(243, 243, 243);
 }
+.Welcome{
+  position: relative;
+  margin-bottom: -28px;
+}
 .Contain{
     margin-top: 30px;
     max-width: 1000px;
@@ -49,13 +53,17 @@ body{
 }
 .ReciverContain{
     margin-top: 30px;
-    max-width: 1000px;
+    
     width: 100%;
     background: #fff;
     padding: 6px 10px;
     border: 1.5px solid rgb(0, 94, 131);
     border-radius: 15px;
     box-shadow: 0px 0px 5px 2px rgba(145, 145, 145, 0.2);
+}
+.radioselect{
+  position: absolute;
+  left: 390px;
 }
 .btnsubmit{
     background-color: rgb(0, 94, 131);
@@ -71,10 +79,7 @@ body{
 .btnsubmit:hover{
     background-color: rgb(0, 79, 110);
 }
-.radioselect{
-    position: absolute;
-    left: 390px;
-}
+
 .Location-Contain
 {
     margin-top: 10px;
@@ -176,10 +181,26 @@ form .user-details .Radio-div{
 }
 
 @media only screen and (max-width: 600px) {
+  .Contain{
+    width: 347px;
+  }
+
+  /* ReciverContain */
+  .ReciverContain{
+    position: relative;
+    margin-top: 250px;
+    width: 20px;
+  }
+  .Receviertitle{
+    margin-left: 20px;
+  }
+
+
     .user-details {
       flex-direction: column;
-      width: 700px;
-      padding: 9px 1px;
+      width: 680px;
+      padding: 9px 0px;
+      margin-left: -10px;
     }
     .Contain{
         margin-left: 7px;
@@ -191,8 +212,30 @@ form .user-details .Radio-div{
         position: absolute;
         left: 180px;
     }
+    .Welcome{
+      position: relative;
+      right: 170px;
+    }
+
+    /* Location part */
+  .LocationContain{
+    margin-left: 8px;
+    width: 347px;
+    margin-top: 10px;
+  }
+.FropDownForm{
+   
+    left: 17px;
+    
+  }
+
+  
   }
   
+
+
+
+
   .my-text {
     color: #004f69; 
   }

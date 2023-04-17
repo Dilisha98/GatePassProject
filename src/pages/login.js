@@ -39,11 +39,11 @@ export default function Login() {
           <div className='user-details'>
             <div className='input-box'>
               <span className='details'>User ID</span>
-              <input type='text' placeholder='Enter User ID' value={userId} onChange={handleUserIdChange} required />
+              <input className='inputtypebox' type='text' placeholder='Enter User ID' value={userId} onChange={handleUserIdChange} required />
             </div>
             <div className='input-box'>
               <span className='details'>Password</span>
-              <input type='password' placeholder='Enter Password' value={password} onChange={handlePasswordChange} required />
+              <input className='inputtypebox' type='password' placeholder='Enter Password' value={password} onChange={handlePasswordChange} required />
             </div>
             <div>
               <button className='logbtn' type='button' onClick={handleLogin}>

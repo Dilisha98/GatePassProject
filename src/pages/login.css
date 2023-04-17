@@ -48,7 +48,7 @@ margin-right: 10px;
 
 
 .content{
-    flex-basis: 50%;
+    flex-basis: 65%;
     background: rgba(255, 255, 255, 0.2);
     font-family: poppins;
     padding: 25px;
@@ -126,10 +126,10 @@ color: #BABABA;
 
 .logincontainer .title{
     text-align: center;
-    margin-top: 4%;
+    margin-top: 6%;
     margin-bottom: 20px;
 
-    margin-left: 55px;
+    margin-left: 80px;
 width: 286px;
 height: 50px;
 left: 724px;
@@ -204,7 +204,7 @@ border-radius: 9px;
         align-items: flex-start;
         padding: 8px 122px;
         color: #fafafa;
-        margin-left: 30%;
+        margin-left: 25%;
         margin-top: 40px;
         background: #035297;
         border-radius: 14px;
@@ -214,21 +214,49 @@ border-radius: 9px;
         background: #003666;
         color: #fafafa;
     }
+
+
+
     @media(max-width: 768px){
+     
         .login {
+          width: 550px;
           flex-direction: column;
-          margin: 0 20px;
+         
         }
+        .content img {
+          width: 120%;
+      height: 120%px;
+      margin-top: 10px;
+      margin-left: -19px;
+      margin-right: 16px;
+      
+      }
+      .logincontainer .title{
+       
+      margin-top: -20px;
+      margin-left: 20px;
+        
+      }
+      
+    .input-box .details{
+      margin-left: 20px;
+    }
+    .input-box  .inputtypebox{
+      margin-left: 10px;
+      margin-right: 40px;
+      width: 10px;
+    }
+
         form .user-details .input-box{
           margin-left: 2%;
           margin-right: 70%;
+          width: 300px;
         }
-        .input-box{
-          width: 5%;
-          margin-right: 110%;
-        }
+        
         .logbtn{
           margin-left: 4%;
         }
+        
        
       }

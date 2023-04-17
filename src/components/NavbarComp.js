@@ -9,7 +9,7 @@ export default function NavbarComp() {
   return (
     <div>
       <>
-        <Navbar bg="light" expand="lg" className="align-items-center " style={{height: '40px'}} >
+        <Navbar  bg="light" expand="lg" className="SlTtitileNavbar align-items-center " style={{height: '40px'}} >
       <Container className='Slttitle' >
           <Nav className='color mx-auto' >
             <p href="#action1" className="head me-4 mt-3">SLT GATE PASS</p>
