@@ -55,7 +55,7 @@ const PendingItemDetails = () => {
                           </div>                   
                           <div class="slider-image" >
                               <img className='itemRight'   src={require('../../img/laptop2.jpg')} alt="imagee" />
-                          </div>>
+                          </div>
                   
                 </div>
                 <div className=''>
