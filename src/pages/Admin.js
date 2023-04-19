@@ -8,6 +8,7 @@ export default function Admin() {
   return (
       <>
       <Container className='Contain'>
+      <div className='title'>Admin</div>
       <form action="#">
                 <div class="user-details">
                     <div class="input-div">
