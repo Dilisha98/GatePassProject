@@ -1,7 +1,7 @@
 import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/esm/Container';
 import '../App.css';
-import React, { useState, useRef} from "react";
+import React, { useState, useRef } from "react";
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { Transition } from 'react-transition-group';
@@ -11,6 +11,7 @@ import { Transition } from 'react-transition-group';
 export default function New_Request() {
 
   const [selectedDate, setSelectedDate] = useState(null);
+
   const [returnableYesChecked, setReturnableYesChecked] = useState(false);
 
   // this is for the retrinable radio button
@@ -34,8 +35,7 @@ export default function New_Request() {
    const [uploadedFileName, setUploadedFileName] = useState(null);
  const inputRef = useRef(null);
 
- 
- 
+  
 
     const handleUpload = () => {
     inputRef.current?.click();
@@ -45,6 +45,11 @@ export default function New_Request() {
    inputRef.current?.files &&
       setUploadedFileName(inputRef.current.files[0].name);
   };
+
+
+
+
+
 
 
 
@@ -70,7 +75,6 @@ export default function New_Request() {
   };
 
 
-
   const fadeStyles = {
     entering: { opacity: 0 },
     entered: { opacity: 1, transition: 'opacity 150ms ease-in-out' },
@@ -78,22 +82,22 @@ export default function New_Request() {
     exited: { opacity: 0, transition: 'opacity 150ms ease-in-out' },
   };
 
-  // This is If receiver Available yes or no
+   // This is If receiver Available yes or no
+  
 
-  const [showForm, setShowForm] = useState(false);
+   const [showForm, setShowForm] = useState(false);
 
-  const handleRadioReciverChange = (event) => {
-   setShowForm(event.target.value === 'Yes');
- };
+   const handleRadioReciverChange = (event) => {
+    setShowForm(event.target.value === 'Yes');
+  };
+
+
 
 
   return (
     <>
     {/*------------------- This is a Sender Details form-------------------*/}
-    <div className='Welcome'>
-        <h4>Welcome Admin</h4>
-        <h7>Pages/ New Request</h7>
-      </div>
+
         <Container className='Contain'>
         <div className='title'>Sender Details</div>
         <form action="#">
@@ -303,13 +307,13 @@ export default function New_Request() {
         </Container>
 
                   {/*------------------- If Reciver Available -------------------*/}
-        <Container className=''>
+        <Container className='ReciverContain'>
         
-        <form action="#" className='ReciverContain ml-2'>
+        <form action="#" className='ml-2'>
           <div className="user-details">
             <div className="row">
               <div className="">
-                <span className="Receviertitle">If Receiver Available</span>
+                <span className="">If Receiver Available</span>
               </div>
               <div className='radioselect'>
                 {['radio'].map((type) => (
@@ -339,7 +343,7 @@ export default function New_Request() {
           </div>
       </form>
 
-   </Container>
+        </Container>
         {!showForm && (<Container className='btnContain'>
         <button className='btnsubmit'>Submit</button>
         </Container>
