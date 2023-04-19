@@ -1,10 +1,15 @@
 import React from 'react';
 import Container from 'react-bootstrap/esm/Container';
 import '../Item_Tracker.css';
-
+import { Navigate } from 'react-router-dom';
 
 
 export default function Item_Tracker() {
+  const [goToItemTrackerItemDetails, setGoToItemTrackerItemDetails] = React.useState(false);
+
+  if(goToItemTrackerItemDetails){
+    return <Navigate to= "/ItemTrackerItemDetails" />;
+  }
   return (
     <Container className='Contain'>
     <div className='title'>Item Tracker</div>
@@ -27,7 +32,8 @@ export default function Item_Tracker() {
     <td>Colombo</td>
     <td>Kandy</td>
     <td>2023-02-22 16:30:34</td>
-    <td><button class="button">View</button></td>
+    <td><button class="button" onClick={()=>{
+                        setGoToItemTrackerItemDetails(true);}}>{""}View</button></td>
   </tr>
   <tr>
   <td>3423456</td>
@@ -36,7 +42,8 @@ export default function Item_Tracker() {
     <td>Colombo</td>
     <td>Kandy</td>
     <td>2023-02-22 16:30:34</td>
-    <td><button class="button">View</button></td>
+    <td><button class="button" onClick={()=>{
+                        setGoToItemTrackerItemDetails(true);}}>{""}View</button></td>
   </tr>
   <tr>
     <td>3423457</td>
@@ -45,7 +52,8 @@ export default function Item_Tracker() {
     <td>Colombo</td>
     <td>Kandy</td>
     <td>2023-02-22 16:30:34</td>
-    <td><button class="button">View</button></td>
+    <td><button class="button" onClick={()=>{
+                        setGoToItemTrackerItemDetails(true);}}>{""}View</button></td>
   </tr>
 
   

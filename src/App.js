@@ -16,7 +16,9 @@ import MyApprovals from "./pages/MyApprovals";
 import ApprovedItemDetails from "./pages/MyApprovalsAllTabs/ApprovedItemDetails";
 import PendingItemDetails from "./pages/MyApprovalsAllTabs/PendingItemDetails";
 import RejectedItemDetails from "./pages/MyApprovalsAllTabs/RejectedItemDetails";
-import Receipt_Details from "./pages/My-Receipts/Receipt_Details"
+import Receipt_Details from "./pages/My-Receipts/Receipt_Details";
+
+import ItemTrackerItemDetails from './pages/ItemTrackerItemDetails';
 
 function App() {
   return (
@@ -35,6 +37,8 @@ function App() {
                 <Route path="/PendingItemDetails" element={<PendingItemDetailsWithNavbar />}/>
                 <Route path="/RejectedItemDetails" element={<RejectedItemDetailsWithNavbar />}/>
                 <Route path="/Receipt_Details" element={<Receipt_DetailsWithNavbar />}/>
+
+                <Route path='/ItemTrackerItemDetails' element={<ItemTrackerItemDetailsWithNavbar/>}/>
                              
             </Routes>
           </Router>
@@ -180,6 +184,19 @@ function Receipt_DetailsWithNavbar () {
       <>
         <NavbarComp />
         <Receipt_Details/> 
+      </>
+    );
+  }
+  return null;
+}
+
+function ItemTrackerItemDetailsWithNavbar () {
+  const currentPath = window.location.pathname;
+  if (currentPath === '/ItemTrackerItemDetails') {
+    return (
+      <>
+        <NavbarComp />
+        <ItemTrackerItemDetails/> 
       </>
     );
   }
