@@ -2,6 +2,8 @@ import React from 'react';
 import Container from 'react-bootstrap/esm/Container';
 import { Navigate } from 'react-router-dom';
 import './my_receipt.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 const Receipt_Details = () => {
   const [goToMyReceipts, setGoToMyReceipts] = React.useState(false);
@@ -12,10 +14,10 @@ const Receipt_Details = () => {
   return (
     <div>
     <Container className='ReciverContain'>
-    <div className='title'>My Receipts</div>
-          <button onClick={() => {setGoToMyReceipts(true);}} class="btnBack btn-danger">{""}Back</button>
-
-         <div className='titleItem'>
+    <div className="title-and-button">
+        <div className='title'>My Receipt Details</div>
+      <button onClick={() => {setGoToMyReceipts(true);}} className="backbtn"> <FontAwesomeIcon icon={faArrowLeft}/> Back</button>
+   </div>    <div className='titleItem'>
                 <div className='ItemTitle'>Item Details</div>
                 <div className='RefNoTitle'>Ref.No :- 3423455</div>
         </div>
@@ -40,13 +42,13 @@ const Receipt_Details = () => {
                 <div className='testimonials'>
 
                           <div >
-                              <img className='itemleft'   src={require('../../img/laptop.jpg')} alt="imagee" />
+                              <img className='itemleft'   src={require('../../img/laptop.jpg')} alt="lap1" />
                           </div>  
-                          <div >
-                              <img className='itemleft'   src={require('../../img/laptop1.jpg')} alt="imagee" />
+                          <div  class="slider-image">
+                              <img className='item'   src={require('../../img/laptop1.jpg')} alt="lap2" />
                           </div>                   
-                          <div >
-                              <img className='itemleft'   src={require('../../img/laptop2.jpg')} alt="imagee" />
+                          <div class="slider-image" >
+                              <img className='itemRight'   src={require('../../img/laptop2.jpg')} alt="lap3" />
                           </div>                                    
                   </div>
 
@@ -74,13 +76,13 @@ const Receipt_Details = () => {
                 <div className='testimonials'>
 
                           <div >
-                              <img className='itemleft'   src={require('../../img/laptop.jpg')} alt="imagee" />
+                              <img className='itemleft'   src={require('../../img/laptop.jpg')} alt="lap1" />
                           </div>  
-                          <div >
-                              <img className='itemleft'   src={require('../../img/laptop1.jpg')} alt="imagee" />
+                          <div  class="slider-image">
+                              <img className='item'   src={require('../../img/laptop1.jpg')} alt="lap2" />
                           </div>                   
-                          <div >
-                              <img className='itemleft'   src={require('../../img/laptop2.jpg')} alt="imagee" />
+                          <div class="slider-image" >
+                              <img className='itemRight'   src={require('../../img/laptop2.jpg')} alt="lap3" />
                           </div>                                    
                   </div>
          

@@ -34,7 +34,7 @@ function App() {
               <Route path="/ApprovedItemDetails" element={<ApprovedItemDetailsWithNavbar />}/>
                 <Route path="/PendingItemDetails" element={<PendingItemDetailsWithNavbar />}/>
                 <Route path="/RejectedItemDetails" element={<RejectedItemDetailsWithNavbar />}/>
-                <Route path="/Receipt_Details" element={<Receipt_Details />}/>
+                <Route path="/Receipt_Details" element={<Receipt_DetailsWithNavbar />}/>
                              
             </Routes>
           </Router>
@@ -167,6 +167,19 @@ function RejectedItemDetailsWithNavbar () {
       <>
         <NavbarComp />
         <RejectedItemDetails/> 
+      </>
+    );
+  }
+  return null;
+}
+
+function Receipt_DetailsWithNavbar () {
+  const currentPath = window.location.pathname;
+  if (currentPath === '/Receipt_Details') {
+    return (
+      <>
+        <NavbarComp />
+        <Receipt_Details/> 
       </>
     );
   }

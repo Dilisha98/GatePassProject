@@ -15,7 +15,7 @@ const RejectedItemDetails = () => {
     
     <div>
        <div className='Welcome'>
-        <h4>Welcome Kithmal !!</h4>
+        <h4>Welcome Adimn</h4>
         <h7>Pages/ My Approval/ Item Details</h7>
       </div>
     <Container className='ReciverContain'>
@@ -47,14 +47,14 @@ const RejectedItemDetails = () => {
                 </div>
                 <div className='testimonials'>
 
-                        <div >
-                            <img className='itemleft'   src={require('./NightWing.jpg')} alt="imagee" />
+                <div >
+                            <img className='itemleft'   src={require('../../img/laptop.jpg')} alt="imagee" />
                         </div>
                         <div class="slider-image">
-                            <img className='item' src={require('./Robin.jpg')} alt="Robin" />
+                            <img className='item' src={require('../../img/laptop1.jpg')} alt="Robin" />
                         </div>
                         <div class="slider-image">
-                              <img className='itemRight'  src={require('./batgirl.jpg')} alt="batgirl" />
+                              <img className='itemRight'  src={require('../../img/laptop2.jpg')} alt="batgirl" />
                         </div>
                   
                 </div>
