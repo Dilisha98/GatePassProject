@@ -17,6 +17,8 @@ import ApprovedItemDetails from "./pages/MyApprovalsAllTabs/ApprovedItemDetails"
 import PendingItemDetails from "./pages/MyApprovalsAllTabs/PendingItemDetails";
 import RejectedItemDetails from "./pages/MyApprovalsAllTabs/RejectedItemDetails";
 
+import ItemTrackerItemDetails from './pages/ItemTrackerItemDetails';
+
 function App() {
   return (
           <Router>
@@ -33,6 +35,8 @@ function App() {
               <Route path="/ApprovedItemDetails" element={<ApprovedItemDetailsWithNavbar />}/>
                 <Route path="/PendingItemDetails" element={<PendingItemDetailsWithNavbar />}/>
                 <Route path="/RejectedItemDetails" element={<RejectedItemDetailsWithNavbar />}/>
+
+                <Route path='/ItemTrackerItemDetails' element={<ItemTrackerItemDetails/>}/>
                              
             </Routes>
           </Router>
