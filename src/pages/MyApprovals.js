@@ -5,14 +5,15 @@ import RejectedTab from "./MyApprovalsAllTabs/RejectedTab.js";
 import TabNavItem from "./V2/TabNavItem.js";
 import TabContent from "./V2/TabContent.js";
 
+
 const MyApprovals = () => {
   const [activeTab, setActiveTab] = useState("approvedtab");
  
   return (
-    <div className="myapproval">
-      <div className='Welcome'>
-        <h4>Welcome Kithmal !!</h4>
-        <h7>Pages/My Approval</h7>
+    <div className="myapproval" >
+      <div className='Welcome' style={{position:"relative", marginBottom:"5px"}}>
+        <h4>Welcome Admin</h4>
+        <h7>Pages/ New Request</h7>
       </div>
       <div className="myapprovals">
         <div className='subMyapprovals'>

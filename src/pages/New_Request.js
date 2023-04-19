@@ -1,7 +1,7 @@
 import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/esm/Container';
 import '../App.css';
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef} from "react";
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { Transition } from 'react-transition-group';
@@ -11,29 +11,31 @@ import { Transition } from 'react-transition-group';
 export default function New_Request() {
 
   const [selectedDate, setSelectedDate] = useState(null);
+  const [returnableYesChecked, setReturnableYesChecked] = useState(false);
+
+  // this is for the retrinable radio button
+
+  const handleYesRadioChange = () => {
+    setSelectedDate(new Date());
+    setReturnableYesChecked(true);
+  };
+
+  const handleNoRadioChange = () => {
+    setSelectedDate(null);
+    setReturnableYesChecked(false);
+  };
+
+  const handleDatePickerChange = (date) => {
+    setSelectedDate(date);
+  };
+
+  // End Retutnable radio button js
 
    const [uploadedFileName, setUploadedFileName] = useState(null);
  const inputRef = useRef(null);
 
-  const returnableYesRef = useRef(null);
-  const dueDateFieldRef = useRef(null);
-  const noRef = useRef(null);
-
-  useEffect(() => {
-    const returnableYes = returnableYesRef.current;
-    const dueDateField = dueDateFieldRef.current;
-    const noRadio = noRef.current;
-    returnableYes.addEventListener('change', function() {
-      if (returnableYes.checked && dueDateField) {
-        dueDateField.style.opacity = '1'; // show the due date field
-        noRadio.disabled = false; // enable the No radio button
-      } else if (dueDateField) {
-        dueDateField.style.opacity = '0.2'; // hide the due date field
-        setSelectedDate(null); // reset the selected date
-        noRadio.disabled = true; // disable the No radio button
-      }
-    });
-  }, []);
+ 
+ 
 
     const handleUpload = () => {
     inputRef.current?.click();
@@ -43,18 +45,6 @@ export default function New_Request() {
    inputRef.current?.files &&
       setUploadedFileName(inputRef.current.files[0].name);
   };
-
-
-  const handleNoRadioChange = () => {
-    setSelectedDate(null);
-    const dueDateField = dueDateFieldRef.current;
-    if (dueDateField) {
-      dueDateField.style.opacity = '0.2'; // update opacity of the datepicker field
-    }
-  };
-
-
-
 
 
 
@@ -80,11 +70,6 @@ export default function New_Request() {
   };
 
 
-const [showForm, setShowForm] = useState(false);
-
-   const handleRadioReciverChange = (event) => {
-    setShowForm(event.target.value === 'Yes');
-  };
 
   const fadeStyles = {
     entering: { opacity: 0 },
@@ -92,6 +77,14 @@ const [showForm, setShowForm] = useState(false);
     exiting: { opacity: 1 },
     exited: { opacity: 0, transition: 'opacity 150ms ease-in-out' },
   };
+
+  // This is If receiver Available yes or no
+
+  const [showForm, setShowForm] = useState(false);
+
+  const handleRadioReciverChange = (event) => {
+   setShowForm(event.target.value === 'Yes');
+ };
 
 
   return (
@@ -200,31 +193,30 @@ const [showForm, setShowForm] = useState(false);
                   </div>
                 </div>
                 <div className="Radio-div">
-              <div>
-                <span className="details ">Returnable</span>
-                {['radio'].map((type) => (
-                  <div key={`inline-${type}`} name="radio" className="mb-3">
-                    <Form.Check
-                        inline
-                        label="Yes"
-                        name="group1"
-                        type={type}
-                        id={`inline-${type}-1`}
-                        ref={returnableYesRef}
-                      />
-                      <Form.Check
-                        inline
-                        label="No"
-                        name="group1"
-                        type={type}
-                        id={`inline-${type}-2`}
-                        onChange={handleNoRadioChange}
-                        ref={noRef}
-                      />
-                  </div>
-                ))}
-                     </div>
-                </div>
+            <div>
+              <span className="details ">Returnable</span>
+              <div key="inline-radio" name="radio" className="mb-3">
+                <Form.Check
+                  inline
+                  label="Yes"
+                  name="group1"
+                  type="radio"
+                  id="inline-radio-1"
+                  checked={returnableYesChecked}
+                  onChange={handleYesRadioChange}
+                />
+                <Form.Check
+                  inline
+                  label="No"
+                  name="group1"
+                  type="radio"
+                  id="inline-radio-2"
+                  checked={!returnableYesChecked}
+                  onChange={handleNoRadioChange}
+                />
+              </div>
+            </div>
+          </div>
                 <div className='input-div'>
                   <div>
                     <span className='details'>Description</span>
@@ -240,22 +232,28 @@ const [showForm, setShowForm] = useState(false);
                     ></textarea>
                   </div>
                 </div>
-                <div className="input-div" name="Date" ref={dueDateFieldRef} style={{ opacity: '0.2' }}>
-                  <div>
-                    <span className="details">Due_Date</span>
-                    <DatePicker
-                    name='Duet Date'
-                      selected={selectedDate}
-                      onChange={date => setSelectedDate(date)}
-                      dateFormat="dd/MM/yyyy"
-                      className="input"
-                      placeholderText="Select due date"
-                      isClearable
-                      showYearDropdown
-                      scrollableYearDropdown
-                      yearDropdownItemNumber={15}
-                    />
-                  </div></div>
+                <div
+            className="input-div"
+            name="Date"
+            style={{ opacity: returnableYesChecked ? 1 : 0.2 }}
+          >
+            <div>
+              <span className="details">Due_Date</span>
+              <DatePicker
+                name="Due Date"
+                selected={selectedDate}
+                onChange={handleDatePickerChange}
+                dateFormat="dd/MM/yyyy"
+                className="input"
+                placeholderText="Select due date"
+                isClearable
+                showYearDropdown
+                scrollableYearDropdown
+                yearDropdownItemNumber={15}
+                disabled={!returnableYesChecked}
+              />
+            </div>
+          </div>
                   
                 
                 </div>

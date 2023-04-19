@@ -8,16 +8,20 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 const ApprovedItemDetails = () => {
   const [goToMyApprovals, setGoToMyApprovals] = React.useState(false);
+  
+
 
   if(goToMyApprovals){
     return <Navigate to= "/MyApprovals" />;
   }
 
+
+
   return (
     
     <div>
-       <div className='Welcome'>
-        <h4>Welcome Kithmal !!</h4>
+       <div className='Welcome' style={{position:"relative", marginBottom:"5px"}}>
+        <h4>Welcome Admin</h4>
         <h7>Pages/ My Approval/ Item Details </h7>
       </div>
     <Container className='ReciverContain'>
@@ -61,8 +65,9 @@ const ApprovedItemDetails = () => {
                   
                 </div>
                 <div className=''>
-                  <button className='btnview'>View Photo</button>
+                  <button className='btnview'  >View Photo</button>
                 </div>
+               
             </div>
 
            

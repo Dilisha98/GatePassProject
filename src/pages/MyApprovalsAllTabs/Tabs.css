@@ -472,3 +472,7 @@ body {
   color: #000;
   font-size: 1em;
 }
+.Welcome{
+  position: relative;
+  margin-bottom: -28px;
+}
