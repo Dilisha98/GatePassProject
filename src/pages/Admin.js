@@ -49,8 +49,8 @@ export default function Admin() {
                    </div> 
                    <div class="input-div">
                         <div>
-                            <span class="details">Item Catogary</span>
-                            <input type="text" name="" class="input" placeholder="Enter Catogory here"/> 
+                            <span class="details">Item Categary</span>
+                            <input type="text" name="" class="input" placeholder="Enter Categary here"/> 
                         </div>
                     </div>
                       
