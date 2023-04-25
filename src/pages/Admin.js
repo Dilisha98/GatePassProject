@@ -45,8 +45,15 @@ export default function Admin() {
                         
                         </ReactFileReader>
                    </div>     
-                   </div>  
-                    
+                   
+                   </div> 
+                   <div class="input-div">
+                        <div>
+                            <span class="details">Item Catogary</span>
+                            <input type="text" name="" class="input" placeholder="Enter Catogory here"/> 
+                        </div>
+                    </div>
+                      
                  </div>
                  
                  
