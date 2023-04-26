@@ -17,6 +17,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## You Need to install Bootstrap
 ### `npm install bootstrap`
 
+## You Need to install font Awesome Packages
+### `npm install font-awesome --save`
+### `npm i @fortawesome/fontawesome-svg-core`
+
+
 
 ## Available Scripts
 
