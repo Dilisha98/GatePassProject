@@ -161,7 +161,7 @@ form .user-details .Radio-div{
     border-radius: 5px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    float: left;
+    
   }
   
   .img-input:focus {
@@ -179,6 +179,17 @@ form .user-details .Radio-div{
     padding: 8px;
     box-sizing: border-box;
 }
+.ItemCategory{
+  width: 410px;
+  height: 40px;
+  border: 1px solid rgb(109, 109, 109);
+  border-radius: 9px;
+  margin: 3px 0;
+  outline: none;
+ 
+  box-sizing: border-box;
+}
+
 
 @media only screen and (max-width: 600px) {
   .Contain{
@@ -195,7 +206,16 @@ form .user-details .Radio-div{
     margin-left: 20px;
   }
 
-
+  .ItemCategory{
+    width: 310px;
+    height: 40px;
+    border: 1px solid rgb(109, 109, 109);
+    border-radius: 9px;
+    margin: 3px 0;
+    outline: none;
+    padding: 8px 30px;
+    box-sizing: border-box;
+  }
     .user-details {
       flex-direction: column;
       width: 680px;

@@ -47,15 +47,8 @@ export default function New_Request() {
   };
 
 
-
-
-
-
-
-
-
   const [fields, setFields] = useState([
-    { serviceNo: '', photo: '', SerialNo: '', ReturnabalNo: false, Description: '', Duet_Date: null },
+    { ItemName: '', photo: '', SerialNo: '', ReturnabalNo: false, Description: '', Duet_Date: null, selectOption: '' },
   ]);
 
   const handleChangeInput = (index, event) => {
@@ -65,7 +58,7 @@ export default function New_Request() {
   };
 
   const handleAddFields = () => {
-    setFields([...fields, { serviceNo: '', photo: '', SerialNo: '', ReturnabalNo: false, Description: '', Duet_Date: null }]);
+    setFields([...fields, { ItemName: '', photo: '', SerialNo: '', ReturnabalNo: false, Description: '', Duet_Date: null, selectOption: '' }]);
   };
 
   const handleRemoveFields = (index) => {
@@ -90,8 +83,6 @@ export default function New_Request() {
    const handleRadioReciverChange = (event) => {
     setShowForm(event.target.value === 'Yes');
   };
-
-
 
 
   return (
@@ -150,22 +141,21 @@ export default function New_Request() {
       <Container key={index} className='Contain'>
         <div className='title'>Item Details</div>
         <form>
-          
-            
               <div className='user-details'>
                 <div className='input-div'>
                   <div>
-                    <span className='details'>Service No</span>
+                    <span className='details'>Item Name</span>
                     <input
                       type='text'
-                      name='serviceNo'
+                      name='ItemName'
                       className='input'
-                      placeholder='Enter Service No Here'
-                      value={field.serviceNo}
+                      placeholder='Enter Item Name Here'
+                      value={field.ItemName}
                       onChange={(event) => handleChangeInput(index, event)}
                     />
                   </div>
                 </div>
+               
                 <div className='input-div'>
                   <div>
                     <span className='details'>photo</span>
@@ -190,7 +180,7 @@ export default function New_Request() {
                       type='text'
                       name='SerialNo'
                       className='input'
-                      placeholder='Enter SerialNo'
+                      placeholder='Enter Serial No'
                       value={field.SerialNo}
                       onChange={(event) => handleChangeInput(index, event)}
                     />
@@ -221,7 +211,42 @@ export default function New_Request() {
               </div>
             </div>
           </div>
-                <div className='input-div'>
+          <div className='input-div'>
+                <div>
+                <span className='details'>Item Category</span>
+                <Form.Select  name="ItemCategory" className="ItemCategory" aria-label="Service No" value={field.selectOption}  onChange={(event) => handleChangeInput(index, event)} >
+                  <option selected>--- Select Items Category ---</option>
+                  <option value="1">Electrics</option>
+                  <option value="2">Furniture</option>
+                  <option value="3">Kurunegala</option>
+                </Form.Select>
+              </div>
+                </div>
+                
+                <div
+            className="input-div"
+            name="Date"
+            style={{ opacity: returnableYesChecked ? 1 : 0.2 }}
+          >
+            <div>
+              <span className="details">Due_Date</span>
+              <DatePicker
+                name="Due Date"
+                selected={selectedDate}
+                onChange={handleDatePickerChange}
+                dateFormat="dd/MM/yyyy"
+                className="input"
+                style={{width:"10px"}}
+                placeholderText="Select due date"
+                isClearable
+                showYearDropdown
+                scrollableYearDropdown
+                yearDropdownItemNumber={15}
+                disabled={!returnableYesChecked}
+              />
+            </div>
+          </div>
+          <div className='input-div'>
                   <div>
                     <span className='details'>Description</span>
                     <textarea
@@ -236,29 +261,7 @@ export default function New_Request() {
                     ></textarea>
                   </div>
                 </div>
-                <div
-            className="input-div"
-            name="Date"
-            style={{ opacity: returnableYesChecked ? 1 : 0.2 }}
-          >
-            <div>
-              <span className="details">Due_Date</span>
-              <DatePicker
-                name="Due Date"
-                selected={selectedDate}
-                onChange={handleDatePickerChange}
-                dateFormat="dd/MM/yyyy"
-                className="input"
-                placeholderText="Select due date"
-                isClearable
-                showYearDropdown
-                scrollableYearDropdown
-                yearDropdownItemNumber={15}
-                disabled={!returnableYesChecked}
-              />
-            </div>
-          </div>
-                  
+         
                 
                 </div>
                 {index > 0 && (
