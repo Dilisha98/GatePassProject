@@ -4,9 +4,12 @@ import { Navigate } from 'react-router-dom';
 import './my_receipt.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
+import Popup from '../../components/Popup';
+import { useState } from 'react';
 
 const Receipt_Details = () => {
   const [goToMyReceipts, setGoToMyReceipts] = React.useState(false);
+  const [buttonPopup, setButtonPopup] = useState(false);
 
   if(goToMyReceipts){
     return <Navigate to= "/My_Receipts" />;
@@ -87,8 +90,13 @@ const Receipt_Details = () => {
                   </div>
          
                 <div className=''>
-                  <button className='btnview'>View Photo</button>
+                <button className='btnview' onClick={() => setButtonPopup(true)}>View Photo</button> 
+                          
                 </div>
+                  <Popup trigger={buttonPopup}>
+                  <h3>My popup</h3>
+                  <p>This iuasdsadsadsad</p>
+                  </Popup>
             </div>
           </form>
         <button className='Receivedbtn'>Received</button>

@@ -27,7 +27,7 @@ const My_Receipts = () => {
     <td>3423455</td>
     <td>Niamal Suriyanayake</td>
     <td>2023-02-22 16:30:34</td>
-    <td><button onClick={() => {setGoToReceiptDetails(true);}} class="button">{""}View</button></td>
+    <td><button onClick={() => {setGoToReceiptDetails(true);}} class="button" >{""}View</button></td>
   </tr>
   <tr>
   <td>3423456</td>
