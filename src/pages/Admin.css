@@ -43,32 +43,19 @@ table {
 }
 .btn-success{
   background-color:#50B748;
-  padding: 2px 17px;
-  gap: 10px;
-
-  width: 65px;
-  height: 28px;
-  left: 534px;
-  top: 524px;
+  
 
   background: #50B748;
   border-radius: 4px;
 
 }
 .btn-danger{
-padding: 2px 17px;
-gap: 10px;
-
-
-width: 86px;
-height: 28px;
-left: 604px;
-top: 524px;
-
-
-border-radius: 4px;
 background-color: #A70000;
 }
+
+  
+
+
 
   
  BiDotsHorizontalRounded{

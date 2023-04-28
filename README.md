@@ -2,29 +2,6 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## First You Need to Install npm
-### `npm install`
-
-## Next You Need to install React Dom
-### `npm install react react-dom`
-
-## After that You Need to install React Dom
-### `npm install react react-dom`
-
-## You Need to install Datepicker
-### `npm install react-datepicker --save`
-
-## You Need to install Bootstrap
-### `npm install bootstrap`
-
-## You Need to install font Awesome Packages
-### `npm install font-awesome --save`
-### `npm i @fortawesome/fontawesome-svg-core`
-### `npm install --save @fortawesome/free-solid-svg-icons`
-
-
-
-
 ## Available Scripts
 
 In the project directory, you can run:

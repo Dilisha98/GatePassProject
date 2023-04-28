@@ -9,16 +9,11 @@
   p{
     font-size: 20px;
   }
-  
   .head {
     color: rgb(2, 68, 126);
   }
   .nav-link:hover {
     color: rgb(2, 68, 126);
   }
-  @media only screen and (max-width: 600px) {
-    .Slttitle{
-      position: relative;
-      top: -20px;
-    }
-  }
+  
+  
