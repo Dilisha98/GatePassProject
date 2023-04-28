@@ -7,8 +7,16 @@
 
 }
 
+.itmbtnRemove{
+  background-color: #920500;
+  border-radius: 7px;
+}
 
 
+.itmbtn{
+  background-color: #047c00;
+  border-radius: 7px;
+}
 
 body{
     justify-content: center;

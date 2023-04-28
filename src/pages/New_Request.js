@@ -10,37 +10,16 @@ import { Transition } from 'react-transition-group';
 
 export default function New_Request() {
 
-  const [selectedDate, setSelectedDate] = useState(null);
 
-  const [returnableYesChecked, setReturnableYesChecked] = useState(false);
 
-  // this is for the retrinable radio button
-
-  const handleYesRadioChange = () => {
-    setSelectedDate(new Date());
-    setReturnableYesChecked(true);
-  };
-
-  const handleNoRadioChange = () => {
-    setSelectedDate(null);
-    setReturnableYesChecked(false);
-  };
-
-  const handleDatePickerChange = (date) => {
-    setSelectedDate(date);
-  };
-
-  // End Retutnable radio button js
-
-   const [uploadedFileName, setUploadedFileName] = useState(null);
+const [uploadedFileName, setUploadedFileName] = useState(null);
  const inputRef = useRef(null);
 
   
-
-    const handleUpload = () => {
-    inputRef.current?.click();
-  };
-
+ const handleUpload = (event) => {
+  event.preventDefault();
+  inputRef.current?.click();
+};
   const handleDisplayFileDetails = () => {
    inputRef.current?.files &&
       setUploadedFileName(inputRef.current.files[0].name);
@@ -48,7 +27,16 @@ export default function New_Request() {
 
 
   const [fields, setFields] = useState([
-    { ItemName: '', photo: '', SerialNo: '', ReturnabalNo: false, Description: '', Duet_Date: null, selectOption: '' },
+    {
+      serviceNo: '',
+      photo: '',
+      SerialNo: '',
+      ReturnabalNo: false,
+      Description: '',
+      Duet_Date: null,
+      returnableChecked: false,
+      selectedDate: null,
+    },
   ]);
 
   const handleChangeInput = (index, event) => {
@@ -58,8 +46,21 @@ export default function New_Request() {
   };
 
   const handleAddFields = () => {
-    setFields([...fields, { ItemName: '', photo: '', SerialNo: '', ReturnabalNo: false, Description: '', Duet_Date: null, selectOption: '' }]);
+    setFields([
+      ...fields,
+      {
+        serviceNo: '',
+        photo: '',
+        SerialNo: '',
+        ReturnabalNo: false,
+        Description: '',
+        Duet_Date: null,
+        returnableChecked: false,
+        selectedDate: null,
+      },
+    ]);
   };
+
 
   const handleRemoveFields = (index) => {
     const values = [...fields];
@@ -190,24 +191,34 @@ export default function New_Request() {
             <div>
               <span className="details ">Returnable</span>
               <div key="inline-radio" name="radio" className="mb-3">
+              <Form.Check
+                      inline
+                      label="Yes"
+                      name={`group1-${index}`}
+                      type="radio"
+                      id={`inline-radio-1-${index}`}
+                      checked={field.returnableChecked}
+                      onChange={() => {
+                        const newFields = [...fields];
+                        newFields[index].returnableChecked = true;
+                        newFields[index].selectedDate = new Date();
+                        setFields(newFields);
+                      }}
+                    />
                 <Form.Check
-                  inline
-                  label="Yes"
-                  name="group1"
-                  type="radio"
-                  id="inline-radio-1"
-                  checked={returnableYesChecked}
-                  onChange={handleYesRadioChange}
-                />
-                <Form.Check
-                  inline
-                  label="No"
-                  name="group1"
-                  type="radio"
-                  id="inline-radio-2"
-                  checked={!returnableYesChecked}
-                  onChange={handleNoRadioChange}
-                />
+                      inline
+                      label="No"
+                      name={`group1-${index}`}
+                      type="radio"
+                      id={`inline-radio-2-${index}`}
+                      checked={!field.returnableChecked}
+                      onChange={() => {
+                        const newFields = [...fields];
+                        newFields[index].returnableChecked = false;
+                        newFields[index].selectedDate = null;
+                        setFields(newFields);
+                      }}
+                    />
               </div>
             </div>
           </div>
@@ -224,27 +235,30 @@ export default function New_Request() {
                 </div>
                 
                 <div
-            className="input-div"
-            name="Date"
-            style={{ opacity: returnableYesChecked ? 1 : 0.2 }}
-          >
+                className="input-div"
+                name="Date"
+                style={{ opacity: field.returnableChecked ? 1 : 0.2 }}
+              >
             <div>
-              <span className="details">Due_Date</span>
-              <DatePicker
-                name="Due Date"
-                selected={selectedDate}
-                onChange={handleDatePickerChange}
-                dateFormat="dd/MM/yyyy"
-                className="input"
-                style={{width:"10px"}}
-                placeholderText="Select due date"
-                isClearable
-                showYearDropdown
-                scrollableYearDropdown
-                yearDropdownItemNumber={15}
-                disabled={!returnableYesChecked}
-              />
-            </div>
+                  <span className="details">Due Date</span>
+                  <DatePicker
+                    name="Due Date"
+                    selected={field.selectedDate}
+                    onChange={(date) => {
+                      const newFields = [...fields];
+                      newFields[index].selectedDate = date;
+                      setFields(newFields);
+                    }}
+                    dateFormat="dd/MM/yyyy"
+                    className="input"
+                    placeholderText="Select due date"
+                    isClearable
+                    showYearDropdown
+                    scrollableYearDropdown
+                    yearDropdownItemNumber={15}
+                    disabled={!field.returnableChecked}
+                  />
+                </div>
           </div>
           <div className='input-div'>
                   <div>
@@ -265,11 +279,11 @@ export default function New_Request() {
                 
                 </div>
                 {index > 0 && (
-                  <button type='button' className='btn btn-danger me-2'  onClick={() => handleRemoveFields(index)}>
+                  <button type='button' className='itmbtnRemove'  onClick={() => handleRemoveFields(index)}>
                     Remove
                   </button>
                 )}
-                <button type='button' className='itmbtn btn btn-success'  onClick={handleAddFields}>
+                <button type='button' className='itmbtn '  onClick={handleAddFields}>
                   Add More Items
                 </button>
           </form>
@@ -401,128 +415,3 @@ export default function New_Request() {
 }
 
 
-   {/*  <Container className='Contain'>
-        <div className='title'>Item Details</div>
-        <form action="#">
-          
-          <div className="user-details">
-          <div class="input-div">
-                        <div>
-                            <span className="details">Name</span>
-                            <input type="text" name="Name" class="input" placeholder="Enter Name"/>
-                        </div>
-          </div>
-          <div class="input-div">
-          <div>
-                <label className="details">Photo</label>
-                <input name="photo" ref={inputRef} onChange={handleDisplayFileDetails}className="d-none"type="file"/>
-                <button onClick={handleUpload} className={`btn btn-outline-${ uploadedFileName ? "success" : "primary" }`}>
-                {uploadedFileName ? uploadedFileName : "Upload photo"}</button>
-       </div>
-                    </div>
-                    <div class="input-div">
-                        <div>
-                            <span class="details">Serial No</span>
-                            <input type="text" name="Serial No" class="input" placeholder="Enter Serial No Here"/>
-                        </div>
-                    </div>
-            <div className="Radio-div">
-              <div>
-                <span className="details">Returnable</span>
-                {['radio'].map((type) => (
-                  <div key={`inline-${type}`} name="radio" className="mb-3">
-                    <Form.Check
-                      inline
-                      label="Yes"
-                      name="group1"
-                      type={type}
-                      id={`inline-${type}-1`}
-                      ref={returnableYesRef}
-                      
-                    />
-                    <Form.Check
-                      inline
-                      label="No"
-                      name="group1"
-                      type={type}
-                      id={`inline-${type}-2`}
-                      onChange={handleNoRadioChange}
-                      defaultChecked={true}
-                      ref={noRef}
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="input-div">
-              <div>
-                <span className="details">Description</span>
-                <textarea id="subject" name="Description" placeholder="Write something.." className='Descrip'></textarea>
-              </div>
-            </div>
-            <div className="input-div" name="Date" ref={dueDateFieldRef} style={{ opacity: '0.2' }}>
-              <div>
-                <span className="details">Due Date</span>
-                <DatePicker
-                  selected={selectedDate}
-                  onChange={date => setSelectedDate(date)}
-                  dateFormat="dd/MM/yyyy"
-                  className="input"
-                  placeholderText="Select due date"
-                  
-
-                />
-              </div>
-            </div>
-          </div>
-          <button className='btn btn-success' style={{ marginLeft:'80%'}}>  Add More Item  <FontAwesomeIcon icon={faPlus} />   </button>
-        </form>
-        
-                </Container> */}
-
-
-{/* <Container className='Contain'>
-        <div className='title'>Sender Details</div>
-        <form action="#">
-                <div class="user-details">
-                    <div class="input-div">
-                        <div>
-                            <span class="details">Service No</span>
-                            <input type="text" name="" class="input" placeholder="Enter Service No Here"/>
-                        </div>
-                    </div>
-                    <div class="input-div">
-                        <div>
-                            <span class="details">Section </span>
-                            <input type="text" name="" class="input" placeholder="Enter Section Here"/>
-                        </div>
-                    </div>
-                    <div class="input-div">
-                        <div>
-                            <span class="details">Name</span>
-                            <input type="text" name="" class="input" placeholder="Enter Name Here"/>
-                        </div>
-                    </div>
-                    <div class="input-div">
-                        <div>
-                            <span class="details">Group</span>
-                            <input type="text" name="" class="input" placeholder="Enter Group "/>
-                        </div>
-                    </div>
-                    <div class="input-div">
-                        <div>
-                            <span class="details">Designation</span>
-                            <input type="text" name="" class="input" placeholder="Enter Designation"/>
-                        </div>
-                    </div>
-                    <div class="input-div">
-                        <div>
-                            <span class="details">Contact No</span>
-                            <input type="text" name="" class="input" placeholder="Enter Contact No"/>
-                        </div>
-                    </div>
-                    
-                 </div>
-                 
-            </form>
-        </Container> */}
