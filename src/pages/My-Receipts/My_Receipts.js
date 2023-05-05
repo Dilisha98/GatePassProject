@@ -12,6 +12,14 @@ const My_Receipts = () => {
     }
   
   return (
+    <div className='MyRequest-Container'>
+      <div className="MyRequest-Container_row1">
+        <div className='WelcomeMyRequest' >
+        <h2 className='WelcomeAdmin'>Welcome Admin</h2>
+        <p>Pages/My Receipts </p>
+      </div></div>
+
+      <div className="MyRequest-Container_row2">
     <Container className='Contain'>
     <div className='title'>My Receipts</div>
     <form action="#">
@@ -47,6 +55,8 @@ const My_Receipts = () => {
 </table>
         </form>
     </Container>
+    </div>
+    </div>
 
 
     

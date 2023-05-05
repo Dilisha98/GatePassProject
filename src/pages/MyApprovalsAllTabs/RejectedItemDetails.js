@@ -13,24 +13,26 @@ const RejectedItemDetails = () => {
   }
   return (
     
-    <div>
-       <div className='Welcome' style={{position:"relative", marginBottom:"5px"}}>
-        <h4>Welcome Admin</h4>
-        <h7>Pages/ My Approval/ Item Details</h7>
-      </div>
+    <div className='MyApproval-Container'>
+       <div className="MyApproval-Container_row1">
+        <div className='WelcomeMyRequest' >
+        <h2 className='WelcomeAdmin'>Welcome Admin</h2>
+        <p>Pages/ My Approval/ Item Details </p>
+      </div></div>
+      <div className="MyRequest-Container_row2">
     <Container className='ReciverContain'>
       
    <div className="title-and-button">
-        <div className='title'>My Approval</div>
+        <div className='title'>My Approval <i class="fas fa-arrow-right"></i> <a class="Reject">Reject </a></div>
       <button onClick={() => {setGoToMyApprovals(true);}} className="backbtn"> <FontAwesomeIcon icon={faArrowLeft}/> Back</button>
    </div>
     
-         <div className='titleItem'>
+         <div className='TitleRejectItem'>
                 <div className='ItemTitle'>Item Details</div>
-                <div className='RefNoTitle'>Ref.No :- 3423455</div>
+                <div className='RefNoRejectTitle'>Ref.No :- 3423455</div>
         </div>
           <form>
-            <div className='grid-even-columns'>
+            <div className='grid-even-Rejectcolumns'>
                 <div className='item-grid'>
                           <div>
                               <span class="formtitle">Item Name :- </span>
@@ -70,6 +72,7 @@ const RejectedItemDetails = () => {
               <button className='Rejectbtn'>Reject</button>
         </div>
     </Container>
+    </div>
   </div>
   );
 };

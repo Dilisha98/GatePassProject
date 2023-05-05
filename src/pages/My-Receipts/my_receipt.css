@@ -50,7 +50,7 @@ body {
   } */
 
 .ReciverContain{
-    margin-top: 30px;
+    margin-top: 20px;
     max-width: 1000px;
     width: 100%;
     background: #fff;
@@ -69,8 +69,8 @@ body {
     font-size: 17px;
     background: #8de3f8;
     margin-left: 70px;
-    margin-top: 20px;
-    margin-right: 70px;
+    margin-top: 15px;
+    margin-right: 50px;
     border-radius: 20px;
     padding: 1px 20px;
     font-weight: 600;

@@ -11,6 +11,14 @@ export default function Item_Tracker() {
     return <Navigate to= "/ItemTrackerItemDetails" />;
   }
   return (
+    <div className='MyRequest-Container'>
+      <div className="MyRequest-Container_row1">
+        <div className='WelcomeMyRequest' >
+        <h2 className='WelcomeAdmin'>Welcome Admin</h2>
+        <p>Pages/Item Tracker </p>
+      </div></div>
+
+      <div className="MyRequest-Container_row2">
     <Container className='Contain'>
     <div className='title'>Item Tracker</div>
     <form action="#">
@@ -60,6 +68,8 @@ export default function Item_Tracker() {
 </table>
         </form>
     </Container>
+    </div>
+    </div>
   )
 }
 

@@ -4,6 +4,14 @@ import '../Item_Tracker.css';
 
 export default function My_Receipts() {
   return (
+    <div className='MyRequest-Container'>
+      <div className="MyRequest-Container_row1">
+        <div className='WelcomeMyRequest' >
+        <h2 className='WelcomeAdmin'>Welcome Admin</h2>
+        <p>Pages/New Request </p>
+      </div></div>
+
+      <div className="MyRequest-Container_row2">
     <Container className='Contain'>
     <div className='title'>My Receipts</div>
     <form action="#">
@@ -38,6 +46,8 @@ export default function My_Receipts() {
 </table>
         </form>
     </Container>
+    </div>
+    </div>
   )
 }
 

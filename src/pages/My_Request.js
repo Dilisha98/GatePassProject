@@ -6,7 +6,16 @@ import '../My_Request.css';
 
 export default function My_Request() {
   return (
-    <Container className='Contain'>
+    <div className='MyRequest-Container'>
+      <div className="MyRequest-Container_row1">
+        <div className='WelcomeMyRequest' >
+        <h2 className='WelcomeAdmin'>Welcome Admin</h2>
+        <p>Pages/ My Requests </p>
+      </div></div>
+
+
+      <div className="MyRequest-Container_row2">
+      <Container className='Contain'>
     <div className='title'>My Request</div>
     <form action="#">
     <table>
@@ -38,6 +47,10 @@ export default function My_Request() {
 </table>
         </form>
     </Container>
+        </div>
+
+      </div>
+   
   )
 }
 

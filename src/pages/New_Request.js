@@ -88,6 +88,14 @@ const [uploadedFileName, setUploadedFileName] = useState(null);
 
   return (
     <>
+    <div className='NewRequest-Container'>
+    <div className="NewRequest-Container_row1">
+        <div className='WelcomeNewRequest' >
+        <h2 className='WelcomeAdmin'>Welcome Admin</h2>
+        <p>Pages/New Request </p>
+      </div></div>
+
+      <div className="NewRequest-Container_row2">
     {/*------------------- This is a Sender Details form-------------------*/}
 
         <Container className='Contain'>
@@ -408,8 +416,8 @@ const [uploadedFileName, setUploadedFileName] = useState(null);
           </div>
         )}
       </Transition>
-
-        
+      </div>
+      </div>
     </>
   );
 }

@@ -375,13 +375,12 @@ body {
     font-weight: 600;
     color: rgb(0, 94, 131);
 }
-.titleItem{
+.TitleItem{
     display: flex;
     font-size: 17px;
     background: #8de3f8;
-    margin-left: 70px;
-    margin-top: 20px;
-    margin-right: 70px;
+    margin-left: 50px;
+  margin-right: 30px;
     border-radius: 20px;
     padding: 1px 20px;
     font-weight: 600;
@@ -426,6 +425,9 @@ body {
     border-radius: 8px;
     justify-content: center;
     margin-top: 22px;
+}
+.btnview:hover{
+  background-color: rgb(0, 58, 97);
 }
 .formtitle{
    color: rgb(0, 85, 119);
@@ -475,4 +477,157 @@ body {
 .Welcome{
   position: relative;
   margin-bottom: -28px;
+}
+
+.MyApproval-Container{
+  display: grid;
+  margin-top: 7px;
+  
+  grid-template-rows: 6% 70% ;
+  padding-left:16%;
+  padding-right: 16%;
+}
+.Pending{
+  color: rgba(192, 54, 0, 0.822);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 20px;
+  cursor: default;
+  
+}
+
+.RefNopendingTitle{
+  font-weight: 400;
+  color: #fff;
+  margin-left: 2%;
+  padding-left: 250px;
+  padding-right: 270px;
+  border-radius: 30px;
+  position: relative;
+  background-color:  rgba(153, 43, 0, 0.822);
+}
+.TitlependingItem{
+  display: flex;
+  font-size: 17px;
+  background: #ffbd87;
+  margin-left: 50px;
+margin-right: 30px;
+  border-radius: 20px;
+  padding: 1px 20px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+}
+
+/*-------------------------- Pending Page --------------------------- */
+
+.Pending{
+  color: rgba(192, 54, 0, 0.822);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+  cursor: default;
+  
+}
+
+.RefNopendingTitle{
+  font-weight: 400;
+  color: #fff;
+  margin-left: 2%;
+  padding-left: 250px;
+  padding-right: 270px;
+  border-radius: 30px;
+  position: relative;
+  background-color:  rgba(153, 43, 0, 0.822);
+}
+.TitlependingItem{
+  display: flex;
+  font-size: 17px;
+  background: #ffbd87;
+  margin-left: 50px;
+margin-right: 30px;
+  border-radius: 20px;
+  padding: 1px 20px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+}
+.grid-even-pendingcolumns {
+  margin-left: 40px;
+  margin-top: 25px;
+  display: grid;
+  background: #ffffff;
+  margin-right: 40px;
+  box-shadow: 0 0 5px 0 rgb(247, 149, 37);
+  padding: 13px 25px ;
+  border-radius: 14px;
+  border: 1px solid #f36202;
+  grid-template-columns: 3fr 1fr 1fr ;
+}
+
+.btnpendingview{
+  background-color: #bd3c00;
+  padding: 3px 18px;
+  border: none;
+  margin-left: 35px;
+  color: #fff;
+  border-radius: 8px;
+  justify-content: center;
+  margin-top: 22px;
+}
+.btnpendingview:hover{
+  background-color: #852a00;
+}
+
+
+/*-------------------------- Reject Page --------------------------- */
+
+.Reject{
+  color: rgba(175, 0, 0, 0.822);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+  cursor: default;
+  
+}
+.Reject:hover
+{
+  color: rgba(175, 0, 0, 0.822);
+}
+.fas{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.RefNoRejectTitle{
+  font-weight: 400;
+  color: #fff;
+  margin-left: 2%;
+  padding-left: 250px;
+  padding-right: 270px;
+  border-radius: 30px;
+  position: relative;
+  background-color:  rgba(153, 10, 0, 0.822);
+}
+
+.TitleRejectItem{
+  display: flex;
+  font-size: 17px;
+  background: #fd9999;
+  margin-left: 50px;
+margin-right: 30px;
+  border-radius: 20px;
+  padding: 1px 20px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+}
+
+.grid-even-Rejectcolumns {
+  margin-left: 40px;
+  margin-top: 25px;
+  display: grid;
+  background: #ffffff;
+  margin-right: 40px;
+  box-shadow: 0 0 5px 0 rgb(255, 87, 87);
+  padding: 13px 25px ;
+  border-radius: 14px;
+  border: 1px solid #c20000;
+  grid-template-columns: 3fr 1fr 1fr ;
 }

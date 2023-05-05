@@ -10,11 +10,14 @@ const MyApprovals = () => {
   const [activeTab, setActiveTab] = useState("approvedtab");
  
   return (
+    <div className='MyRequest-Container'>
     <div className="myapproval" >
-      <div className='Welcome' style={{position:"relative", marginBottom:"5px"}}>
-        <h4>Welcome Admin</h4>
-        <h7>Pages/ New Request</h7>
-      </div>
+    <div className="MyRequest-Container_row1">
+        <div className='WelcomeMyRequest' >
+        <h2 className='WelcomeAdmin'>Welcome Admin</h2>
+        <p>Pages/ My Approval </p>
+      </div></div>
+      <div className="MyRequest-Container_row2">
       <div className="myapprovals">
         <div className='subMyapprovals'>
         <div className='title'>My Approval</div>
@@ -37,6 +40,8 @@ const MyApprovals = () => {
           </TabContent>
         </div>
       </div>
+      </div>
+    </div>
     </div>
   );
 };

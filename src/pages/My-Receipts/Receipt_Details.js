@@ -16,12 +16,19 @@ const Receipt_Details = () => {
     return <Navigate to= "/My_Receipts" />;
   }
   return (
-    <div>
+    <div className='MyRequest-Container'>
+      <div className="MyRequest-Container_row1">
+        <div className='WelcomeMyRequest' >
+        <h2 className='WelcomeAdmin'>Welcome Admin</h2>
+        <p>Pages/My Receipts/ Receipt  Details </p>
+      </div></div>
+
+      <div className="MyRequest-Container_row2">
     <Container className='ReciverContain'>
     <div className="title-and-button">
         <div className='title'>My Receipt Details</div>
       <button onClick={() => {setGoToMyReceipts(true);}} className="backbtn"> <FontAwesomeIcon icon={faArrowLeft}/> Back</button>
-   </div>    <div className='titleItem'>
+   </div>    <div className='TitleItem'>
                 <div className='ItemTitle'>Item Details</div>
                 <div className='RefNoTitle'>Ref.No :- 3423455</div>
         </div>
@@ -102,6 +109,7 @@ const Receipt_Details = () => {
       
       
     </Container>
+  </div>
   </div>
   )
 };

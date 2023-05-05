@@ -18,12 +18,14 @@ const ApprovedItemDetails = () => {
 
 
   return (
+    <div className='MyApproval-Container'>
     
-    <div>
-       <div className='Welcome' style={{position:"relative", marginBottom:"5px"}}>
-        <h4>Welcome Admin</h4>
-        <h7>Pages/ My Approval/ Item Details </h7>
-      </div>
+    <div className="MyApproval-Container_row1">
+        <div className='WelcomeMyRequest' >
+        <h2 className='WelcomeAdmin'>Welcome Admin</h2>
+        <p>Pages/ My Approval/ Item Details </p>
+      </div></div>
+      <div className="MyRequest-Container_row2">
     <Container className='ReciverContain'>
       
    <div className="title-and-button">
@@ -31,7 +33,7 @@ const ApprovedItemDetails = () => {
       <button onClick={() => {setGoToMyApprovals(true);}} className="backbtn"> <FontAwesomeIcon icon={faArrowLeft}/> Back</button>
    </div>
     
-         <div className='titleItem'>
+         <div className='TitleItem'>
                 <div className='ItemTitle'>Item Details</div>
                 <div className='RefNoTitle'>Ref.No :- 3423455</div>
         </div>
@@ -73,10 +75,12 @@ const ApprovedItemDetails = () => {
            
           </form>
           <div className="approval-buttons-container">
-              <button className='Receivedbtn'>Approval</button>
+              <button className='Receivedbtn'>Approved</button>
               <button className='Rejectbtn'>Reject</button>
         </div>
     </Container>
+    
+  </div>
   </div>
   );
 };
