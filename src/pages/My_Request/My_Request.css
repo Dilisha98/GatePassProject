@@ -1,0 +1,340 @@
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  
+ 
+  
+}
+
+.Approval {
+  font-weight: bold;
+}
+
+.Approval.Approve {
+  color: green;
+}
+
+.Approval.Pending {
+  color: orange;
+}
+
+.Approval.Rejected {
+  color: red;
+}
+
+td, th {
+  border: 2px solid white;
+  text-align: center;
+
+}
+
+th {
+  background-color: rgba(3, 27, 78, 0.822);
+  padding: 8px;
+  color: white;
+ 
+}
+
+td {
+
+  border-bottom: 0px;
+  padding: 2px;
+  
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+
+tr:first-child th:first-child {
+border-top-left-radius: 15px;
+}
+tr:first-child th:last-child {
+border-top-right-radius: 15px;
+}
+tr:last-child td:first-child {
+border-bottom-left-radius: 15px;
+}
+tr:last-child td:last-child {
+border-bottom-right-radius: 15px;
+}
+
+button {
+
+background-color: #03b621; /* Green */
+border: none;
+color: white;
+padding: 6px 18px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 14px;
+margin: 4px 2px;
+border-radius: 12px;
+
+
+
+}
+
+
+/* Conainer Rows and Column */
+
+.MyRequest-Container{
+  display: grid;
+  margin-top: 7px;
+  
+  grid-template-rows: 6% 70% ;
+  padding-left:16%;
+  padding-right: 16%;
+}
+.My_RequestDetailsContain{
+  margin-top: -30px;
+  max-width: 1000px;
+  width: 100%;
+  background: #fff;
+  margin-bottom:50px;
+  padding: 6px 10px;
+  border: 1.5px solid rgb(0, 94, 131);
+  border-radius: 15px;
+  box-shadow: 0px 0px 5px 2px rgba(145, 145, 145, 0.2);
+}
+.WelcomeMyRequest p{
+  margin-left: 10px;
+  margin-top: -6px;
+  color: rgb(0, 96, 141);
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.WelcomeItemTracker h2{
+  font-size: 15px;
+  
+  
+  font-weight: 600;
+}
+h2{
+  color:rgb(0, 165, 22);
+  margin-left: 10px;
+ font-size: 15px;
+ font-weight: bold;
+ margin-top: 5px;
+}
+
+
+
+
+/* -------------------------------- Model ------------------- */
+
+
+.userdetails{
+ 
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 32% 36% 40%;
+}
+.userReciverdetails{
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+.dot-icon {
+  color: #9b0000;
+  height: 8px;
+  width: 8px;
+  margin-right: 0.5em;
+}
+.modalContain{
+  position: relative;
+  width: 910px;
+  max-width: 2000px;
+  margin-top: 10px;
+  margin-left: 35px;
+  background: #fff;
+  padding: 25px 30px;
+  border: 1.5px solid rgb(0, 94, 131);
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px 2px rgba(145, 145, 145, 0.2);
+}
+.user_Out_In_Locationdetails{
+margin-top: 10px;
+display: grid;
+padding-left: 40px;
+grid-template-columns: 32% 36% 40%;
+}
+.modaldetails{
+font-weight: 600;
+text-decoration: none;
+color: black;
+}
+.modalContainnext{
+max-width: 2000px;
+  margin-top: 20px;
+  background: #fff;
+  padding: 25px 30px;
+  border: 1.5px solid rgb(0, 94, 131);
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px 2px rgba(145, 145, 145, 0.2);
+}
+.modalviewphoto{
+height: 20px;
+margin-top: 0;
+padding: 0;
+width:120px;
+height: 25px;
+border-radius: 5px;
+background-color: #006ea1;
+}
+.modalviewphoto:hover{
+background-color: #00496b;
+}
+.detailsec{
+text-decoration: none;
+color: black;
+
+cursor: default;
+
+}
+.modelinput-div{
+margin-top: 8px;
+}
+
+
+.TitleRequestItem{
+display: flex;
+font-size: 17px;
+background: #004a75;
+margin-left: 70px;
+margin-right: 70px;
+border-radius: 20px;
+padding: 1px 20px;
+font-weight: 600;
+color: rgb(245, 245, 245);
+}
+
+
+.MyRequestuserdetails{
+  
+  display: grid;
+  margin-left: 75px;
+  margin-bottom: 15px;
+  grid-template-columns: 29% 32% 55%;
+}
+.MyRequest_Itemdetails{
+display: grid;
+margin-left: 25px;
+margin-bottom: 0px;
+grid-template-columns: 45% 36% ;
+}
+.MyRequest_DescriptionItemdetails{
+display: grid;
+margin-left: 25px;
+margin-bottom: 0px;
+margin-top: 15px;
+grid-template-columns: 38.5% 40%;
+}
+
+.rdetails p{
+width: 520px;
+font-size: 16px;
+
+}
+
+.textMyItemDescription_Request{
+display: grid;
+grid-template-columns: 50% 70%;
+}
+.MyRequest_Item_Image_details{
+margin-left: 20px;
+margin-bottom: 20px;
+background-color: #48c5ff2c;
+display: grid;
+border-radius: 25px;
+grid-template-columns: 15% 15% 15% 15% 15%;
+object-fit: cover;
+
+
+}
+.MyRequest_Item_Image_details .modelimg {
+  position: relative;
+  width:  100px;
+  height: 100px;
+  margin-top: 10px;
+  margin-left: 85px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-size: cover;
+  }
+  
+  .modelimg{
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+.MyRequest_grid_even_columns {
+margin-left: 40px;
+margin-top: 25px;
+display: grid;
+background: #ffffff;
+margin-right: 40px;
+box-shadow: 0 0 5px 0 rgb(128, 217, 252);
+padding: 1px 1px ;
+border-radius: 14px;
+border: 1px solid #0287f3;;
+grid-template-rows: 0.5fr 0.5fr;
+
+}
+.textMyRequest{
+margin-top: 12px;
+}
+.MyRequest_Item_Details_grid_even_columns{
+position: relative;
+margin-left: 40px;
+margin-top: 25px;
+
+background: #ffffff;
+margin-bottom: 15px;
+margin-right: 40px;
+box-shadow: 0 0 5px 0 rgb(128, 217, 252);
+padding: 1px 1px ;
+border-radius: 14px;
+border: 1px solid #0287f3;
+
+}
+.ItemMyRequestTitle{
+padding: 10px 30px;
+font-size: 20px;
+margin-bottom: 10px;
+font-weight: 500;
+color: #00496b;
+height: 30px;
+
+
+}
+.MyRequestDetails_Contaion{
+margin-left: 25px;
+margin-right: 20px;
+}
+.textMyRequest_reciver{
+display: grid;
+grid-template-columns: 35% 25% 25%;
+margin-left:70px;
+}
+.reciver_txt{
+margin-top: 5px;
+margin-bottom: 10px;
+}
+.textMyRequest_location{
+
+display: grid;
+grid-template-columns: 50% 50%;
+}
+.MyRequest_location_details{
+background-color: #ffffff;
+margin-left: 70px;
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+
+/* npm i lightbox.js-react */

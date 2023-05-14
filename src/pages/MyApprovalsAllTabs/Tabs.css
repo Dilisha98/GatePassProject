@@ -1,0 +1,633 @@
+.headbutton {
+  display: flex;
+}
+
+.subMyapprovals {
+  flex: 11;
+  width: 80%;
+  padding-bottom: 3rem;
+  padding-left: 1rem;
+  color: #043397;
+
+}
+.btnBack {
+  flex: 1;
+  height: 35px;
+  color: #ffffff;
+  background-color: #043397;
+  border-radius: 10px;
+}
+
+
+.BtnApproveReject{
+  margin: 0.5rem auto 1.5rem;
+  padding: 0.5rem 0.5rem 0.1rem 1.5rem ;
+}
+.btnApprove{
+  height: 35px;
+  width: 125px;
+  color: #ffffff;
+  background-color: #187c2e;
+  border-radius: 10px;
+  border-color: #187c2e;
+}
+.btnReject{
+  height: 35px;
+  width: 125px;
+  color: #ffffff;
+  background-color: #a02020;
+  border-radius: 10px;
+  border-color: #a02020;
+}
+
+
+
+
+.table th {
+  
+  background-color: #050c72; /* change heading row color */
+  color: #ccc;
+}
+
+.ApprovalView {
+  
+  width: 80px;
+  height: 35px;
+  margin: 0.5rem auto 0.5rem;
+  background-color: #00b126;
+}
+.ApprovalView:hover{
+  background-color: #187c2e;
+}
+
+.btnViewPhotos{
+  border: 1px solid #000000;
+  width: 100px;
+  height: 35px;
+  color: #000000;
+  margin: 0.5rem auto 0.5rem;
+  background-color: #043397;
+  border-radius: 8px;
+}
+
+.table {
+ background-color: #bebebe;
+ border-radius: 1rem;
+ 
+ border-collapse: separate;
+}
+
+.image{
+  height: 10px;
+ }
+
+
+
+
+
+
+
+/* My Approval Page Styles */
+.App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.row {
+  display: flex;
+}
+
+.Ref {
+  flex: 5;
+  height: 32px;
+  background-color: #021166;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 2rem;
+  margin-right: 100px;
+}
+
+.itemdetails {
+  flex: 1;
+  height: 32px;
+  text-align: center;
+  background-color: #9fdbfc;
+  color: #000000;
+  border-radius: 2rem;
+  margin-left: 100px;
+}
+
+.imageframe{
+  width: 90%;
+  color: #021166 ;
+  border-radius: 2rem;
+  border: 1px solid #000000;
+  padding: 2.5rem;
+}
+
+
+.rawData1{
+  width: 90%;
+  color: #021166 ;
+  border-radius: 2rem;
+  border: 1px solid #000000;
+  margin: 2.5rem auto 1.5rem;
+  padding: 1.5rem;
+}
+
+.rawDataItemSerial{
+  flex: 1;
+}
+.rawDataReturnable{
+  flex: 1;
+}
+.rawDataImage{
+  flex: 2;
+}
+.rawDataButton{
+  flex: 0.5;
+}
+
+.rawData{
+  width: 90%;
+  color: #021166;
+  border-radius: 2rem;
+  border: 1px solid #000000;
+  margin: 0.1rem auto 1.5rem;
+  padding: 1.5rem;
+}
+
+
+
+
+/* ---------------------My Approval page--------------------- */
+
+h4{
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 195px;
+  margin-top: 20px;
+}
+
+.title{
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(0, 94, 131);
+}
+
+h7{
+  position: relative;
+  margin-left: 198px;
+  top: -13px;
+  font-size: 12px;
+}
+
+/* Tab Content Styles */
+.TabContent {
+  font-size: rem;
+  text-align: center;
+}
+ /* Tab Navigation */
+ ul.nav {
+  position: relative;
+  width: 50%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  font-size: 17px;
+  margin-left: 15px;
+  font-weight: bold;
+  justify-content: space-between;
+  border: 1px solid #39A2DB;
+  border-radius: 10px;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+}
+
+ul.nav li.active {
+  color: #fff;
+  background: #0f8acc;
+}
+
+ul.nav li {
+  width: 33.3%;
+  padding: 6px;
+  list-style: none;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.7s;
+}
+ul.nav li:first-child {
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+ 
+ul.nav li:last-child {
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+}
+ul.nav li:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+/* Tab Container */
+.myapprovals {
+  max-width: 1000px;
+    width: 100%;
+  
+  border: 1px solid #000000;
+  margin: 0.5rem auto 1.5rem;
+  background: #fff;
+    padding: 25px 30px;
+    border: 1.5px solid rgb(0, 94, 131);
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px 2px rgba(145, 145, 145, 0.2);
+ 
+}
+
+/* -------------------------- Table Css -------------------- */
+
+td th {
+  border: none;
+
+}
+.pending-table th{
+  background-color: rgba(192, 54, 0, 0.822);
+}
+.Rejected-table th{
+  background-color: #a02020;
+}
+.button{
+  background-color: #00a71c;
+  width: 80px;
+  height: 30px;
+  border-radius: 7px;
+}
+th {
+ 
+  padding: 8px;
+  color: white;
+ 
+}
+
+td {
+
+  border-bottom: 0px;
+  padding: 2px;
+  
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+
+tr:first-child th:first-child {
+border-top-left-radius: 15px;
+}
+tr:first-child th:last-child {
+border-top-right-radius: 15px;
+}
+tr:last-child td:first-child {
+border-bottom-left-radius: 15px;
+}
+tr:last-child td:last-child {
+border-bottom-right-radius: 15px;
+}
+
+
+/* -------------------------   Item Details -----*/
+
+body {
+  margin: 0;
+ 
+}
+
+.testimonials {
+  display: flex;
+  align-items: center;
+  
+  position: relative;
+  
+  perspective: 100px;
+}
+
+ .item {
+  width: 75px;
+  position: relative;
+  z-index: 1;
+  border-radius: 8px;
+  height: 85px; /* set the height to the same value as the width */
+  box-sizing: border-box;
+  text-align: center;
+  object-fit: cover; /* maintain aspect ratio while filling the container */
+}
+
+.itemleft{
+    margin-right: -20px;
+    width: 60px;
+    border-radius: 8px;
+    height: 70px;
+    box-sizing: border-box;
+  text-align: center;
+  object-fit: cover;
+    
+}
+.itemRight{
+    margin-left: -20px;
+    width: 60px;
+    height: 70px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    text-align: center;
+    object-fit: cover;
+    z-index: 0;
+}
+
+
+
+/* My Receipt
+  } */
+
+.ReciverContain{
+    margin-top: 30px;
+    max-width: 1000px;
+    width: 100%;
+    background: #fff;
+    padding: 6px 10px;
+    margin: 0.5rem auto 1.5rem;
+    border: 1.5px solid rgb(0, 94, 131);
+    border-radius: 15px;
+    box-shadow: 0px 0px 5px 2px rgba(145, 145, 145, 0.2);
+}
+.ReciverContain .title{
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(0, 94, 131);
+}
+.TitleItem{
+    display: flex;
+    font-size: 17px;
+    background: #8de3f8;
+    margin-left: 50px;
+  margin-right: 30px;
+    border-radius: 20px;
+    padding: 1px 20px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+}
+.RefNoTitle{
+    font-weight: 400;
+    color: #fff;
+    margin-left: 2%;
+    padding-left: 250px;
+    padding-right: 270px;
+    border-radius: 30px;
+    position: relative;
+    background-color: rgb(0, 45, 104);
+}
+
+.grid-even-columns {
+    margin-left: 40px;
+    margin-top: 25px;
+    display: grid;
+    background: #ffffff;
+    margin-right: 40px;
+    box-shadow: 0 0 5px 0 rgb(128, 217, 252);
+    padding: 13px 25px ;
+    border-radius: 14px;
+    border: 1px solid #0287f3;;
+    grid-template-columns: 3fr 1fr 1fr ;
+}
+.item-grid{
+    margin-top: 10px;
+    margin-left: 10px;
+    display: grid;
+    grid-template-columns: 50% 50% ;
+}
+
+.btnview{
+    background-color: rgb(0, 81, 134);
+    padding: 3px 18px;
+    border: none;
+    margin-left: 35px;
+    color: #fff;
+    border-radius: 8px;
+    justify-content: center;
+    margin-top: 22px;
+}
+.btnview:hover{
+  background-color: rgb(0, 58, 97);
+}
+.formtitle{
+   color: rgb(0, 85, 119);
+   font-weight: bold;
+}
+
+.Receivedbtn{
+    background: #004491;
+    padding: 3px 40px;
+    border: none;
+    border-radius: 40px;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+.title-and-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding: 10px;
+}
+.approval-buttons-container {
+  display: flex;
+  margin-top: 20px;
+}
+.Rejectbtn{
+  background: #a10202;
+    padding: 3px 40px;
+    border: none;
+    border-radius: 40px;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-left: 12px;
+}
+.backbtn{
+  font-size: 18px;
+  background: #ffffff;
+  color: #004491;
+}
+.item-grid > div::before {
+  content: "\2022"; /* Unicode character for dot */
+  margin-right: 5px;
+  color: #000;
+  font-size: 1em;
+}
+.Welcome{
+  position: relative;
+  margin-bottom: -28px;
+}
+
+.MyApproval-Container{
+  display: grid;
+  margin-top: 7px;
+  
+  grid-template-rows: 6% 70% ;
+  padding-left:16%;
+  padding-right: 16%;
+}
+.Pending{
+  color: rgba(192, 54, 0, 0.822);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 20px;
+  cursor: default;
+  
+}
+
+.RefNopendingTitle{
+  font-weight: 400;
+  color: #fff;
+  margin-left: 2%;
+  padding-left: 250px;
+  padding-right: 270px;
+  border-radius: 30px;
+  position: relative;
+  background-color:  rgba(153, 43, 0, 0.822);
+}
+.TitlependingItem{
+  display: flex;
+  font-size: 17px;
+  background: #ffbd87;
+  margin-left: 50px;
+margin-right: 30px;
+  border-radius: 20px;
+  padding: 1px 20px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+}
+
+/*-------------------------- Pending Page --------------------------- */
+
+.Pending{
+  color: rgba(192, 54, 0, 0.822);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+  cursor: default;
+  
+}
+
+.RefNopendingTitle{
+  font-weight: 400;
+  color: #fff;
+  margin-left: 2%;
+  padding-left: 250px;
+  padding-right: 270px;
+  border-radius: 30px;
+  position: relative;
+  background-color:  rgba(153, 43, 0, 0.822);
+}
+.TitlependingItem{
+  display: flex;
+  font-size: 17px;
+  background: #ffbd87;
+  margin-left: 50px;
+margin-right: 30px;
+  border-radius: 20px;
+  padding: 1px 20px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+}
+.grid-even-pendingcolumns {
+  margin-left: 40px;
+  margin-top: 25px;
+  display: grid;
+  background: #ffffff;
+  margin-right: 40px;
+  box-shadow: 0 0 5px 0 rgb(247, 149, 37);
+  padding: 13px 25px ;
+  border-radius: 14px;
+  border: 1px solid #f36202;
+  grid-template-columns: 3fr 1fr 1fr ;
+}
+
+.btnpendingview{
+  background-color: #bd3c00;
+  padding: 3px 18px;
+  border: none;
+  margin-left: 35px;
+  color: #fff;
+  border-radius: 8px;
+  justify-content: center;
+  margin-top: 22px;
+}
+.btnpendingview:hover{
+  background-color: #852a00;
+}
+
+
+/*-------------------------- Reject Page --------------------------- */
+
+.Reject{
+  color: rgba(175, 0, 0, 0.822);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 20px;
+  cursor: default;
+  
+}
+.Reject:hover
+{
+  color: rgba(175, 0, 0, 0.822);
+}
+.fas{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.RefNoRejectTitle{
+  font-weight: 400;
+  color: #fff;
+  margin-left: 2%;
+  padding-left: 250px;
+  padding-right: 270px;
+  border-radius: 30px;
+  position: relative;
+  background-color:  rgba(153, 10, 0, 0.822);
+}
+
+.TitleRejectItem{
+  display: flex;
+  font-size: 17px;
+  background: #fd9999;
+  margin-left: 50px;
+margin-right: 30px;
+  border-radius: 20px;
+  padding: 1px 20px;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+}
+
+.grid-even-Rejectcolumns {
+  margin-left: 40px;
+  margin-top: 25px;
+  display: grid;
+  background: #ffffff;
+  margin-right: 40px;
+  box-shadow: 0 0 5px 0 rgb(255, 87, 87);
+  padding: 13px 25px ;
+  border-radius: 14px;
+  border: 1px solid #c20000;
+  grid-template-columns: 3fr 1fr 1fr ;
+}
