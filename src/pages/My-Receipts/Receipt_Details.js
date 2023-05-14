@@ -8,7 +8,8 @@ import 'lightbox.js-react/dist/index.css';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Navigate } from 'react-router-dom';
-import '@fortawesome/fontawesome-svg-core/styles.css'
+import '@fortawesome/fontawesome-svg-core/styles.css';
+
 
 function MyModal(props) {
   
