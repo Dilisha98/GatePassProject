@@ -22,6 +22,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### `npm i @fortawesome/fontawesome-svg-core`
 ### `npm install --save @fortawesome/free-solid-svg-icons`
 
+## You Need to install Ligtbox Package
+### `npm i lightbox.js-react`
 
 
 
