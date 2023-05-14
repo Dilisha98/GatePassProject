@@ -1,111 +1,95 @@
-import React from 'react';
-import Container from 'react-bootstrap/esm/Container';
-import { Navigate } from 'react-router-dom';
+
+import { Container } from 'react-bootstrap'
 import './my_receipt.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
-import Popup from '../../components/Popup';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import Button from 'react-bootstrap/Button';
+import 'react-image-lightbox/style.css';
 
-const Receipt_Details = () => {
-  const [goToMyReceipts, setGoToMyReceipts] = React.useState(false);
-  const [buttonPopup, setButtonPopup] = useState(false);
 
-  if(goToMyReceipts){
-    return <Navigate to= "/My_Receipts" />;
+export default function Receipt_Details() {
+  const [showPhotoForm, setShowPhotoForm] = useState(false);
+
+  const handleViewPhoto = () => {
+    setShowPhotoForm(true);
   }
+
+
+
+
+
   return (
     <div>
-    <Container className='ReciverContain'>
-    <div className="title-and-button">
-        <div className='title'>My Receipt Details</div>
-      <button onClick={() => {setGoToMyReceipts(true);}} className="backbtn"> <FontAwesomeIcon icon={faArrowLeft}/> Back</button>
-   </div>    <div className='titleItem'>
-                <div className='ItemTitle'>Item Details</div>
-                <div className='RefNoTitle'>Ref.No :- 3423455</div>
+      <Container className='ReciverContain'>
+        <div className='title'>My Receipts</div>
+        <div className='titleItem'>
+          <div className='ItemTitle'>Item Details</div>
+          <div className='RefNoTitle'>Ref.No :- 3423455</div>
         </div>
-          <form>
-            <div className='grid-even-columns'>
-                <div className='item-grid'>
-                          <div>
-                              <span class="formtitle"><i class="bi bi-dot"></i>Item Name :- </span>
-                              <span class="">Laptop</span>
-                          </div>
-                          <div>
-                              <span class="formtitle">Serial No :- </span>
-                              <span class="">34235</span>
-                          </div>
-                          <div>
-                              <span class="formtitle">Returnable :- </span>
-                              <span class="">No</span>
-                          </div>
-                </div>
-
-             
-                <div className='testimonials'>
-
-                          <div >
-                              <img className='itemleft'   src={require('../../img/laptop.jpg')} alt="lap1" />
-                          </div>  
-                          <div  class="slider-image">
-                              <img className='item'   src={require('../../img/laptop1.jpg')} alt="lap2" />
-                          </div>                   
-                          <div class="slider-image" >
-                              <img className='itemRight'   src={require('../../img/laptop2.jpg')} alt="lap3" />
-                          </div>                                    
-                  </div>
-
-                <div className=''>
-                  <button className='btnview'>View Photo</button>
-                </div>
+        <form>
+          <div className='grid-even-columns'>
+            <div className='item-grid'>
+              <div>
+                <span class="formtitle"><i class="bi bi-dot"></i>Item Name :- </span>
+                <span class="">Laptop</span>
+              </div>
+              <div>
+                <span class="formtitle">Serial No :- </span>
+                <span class="">34235</span>
+              </div>
+              <div>
+                <span class="formtitle">Returnable :- </span>
+                <span class="">No</span>
+              </div>
             </div>
-
-            <div className='grid-even-columns'>
-                <div className='item-grid'>
-                          <div>
-                              <span class="formtitle"><i class="bi bi-dot"></i>Item Name :- </span>
-                              <span class="">Laptop</span>
-                          </div>
-                          <div>
-                              <span class="formtitle">Serial No :- </span>
-                              <span class="">34235</span>
-                          </div>
-                          <div>
-                              <span class="formtitle">Returnable :- </span>
-                              <span class="">No</span>
-                          </div>
-                </div>
-
-                <div className='testimonials'>
-
-                          <div >
-                              <img className='itemleft'   src={require('../../img/laptop.jpg')} alt="lap1" />
-                          </div>  
-                          <div  class="slider-image">
-                              <img className='item'   src={require('../../img/laptop1.jpg')} alt="lap2" />
-                          </div>                   
-                          <div class="slider-image" >
-                              <img className='itemRight'   src={require('../../img/laptop2.jpg')} alt="lap3" />
-                          </div>                                    
-                  </div>
-         
-                <div className=''>
-                <button className='btnview' onClick={() => setButtonPopup(true)}>View Photo</button> 
-                          
-                </div>
-                  <Popup trigger={buttonPopup}>
-                  <h3>My popup</h3>
-                  <p>This iuasdsadsadsad</p>
-                  </Popup>
+            <div className='testimonials'>
+              <div>
+                <img className='itemleft' src={require('../../img/laptop21.jpg')} alt="imagee" />
+              </div>
+              <div class="slider-image">
+                <img className='item' src={require('../../img/laptop22.jpg')} alt="Robin" />
+              </div>
+              <div class="slider-image">
+                <img className='itemRight' src={require('../../img/laptop23.jpg')} alt="batgirl" />
+              </div>
+              
             </div>
-          </form>
-        <button className='Receivedbtn'>Received</button>
+            <div className=''>
+              <Button className='btnview' variant="primary" onClick={handleViewPhoto}>
+                View Photo
+              </Button>
+            </div>
+          </div>
     
-      
-      
-    </Container>
-  </div>
-  )
-};
+        
+        </form>
 
-export default Receipt_Details;
+
+        {/*--------------------------New Form ----------------------------*/}
+        
+        {showPhotoForm &&
+          <div className='photo-form float-in'>
+            
+            
+            <div class="grid-item">
+            <img class= "grid-image" src="https://images-eu.ssl-images-amazon.com/images/I/71iADhr90vL._AC_UL600_SR600,400_.jpg"></img>
+            </div>
+  <div class="grid-item">
+    <img class= "grid-image" src="https://images-eu.ssl-images-amazon.com/images/I/71iADhr90vL._AC_UL600_SR600,400_.jpg"></img></div>
+  <div class="grid-item">
+  <img class= "grid-image" src="https://images-eu.ssl-images-amazon.com/images/I/71iADhr90vL._AC_UL600_SR600,400_.jpg"></img>
+  </div>
+  <div class="grid-item">
+  <img class= "grid-image" src="https://images-eu.ssl-images-amazon.com/images/I/71iADhr90vL._AC_UL600_SR600,400_.jpg"></img></div> 
+  <div class="grid-item">
+  <img class= "grid-image" src="https://images-eu.ssl-images-amazon.com/images/I/71iADhr90vL._AC_UL600_SR600,400_.jpg"></img></div>    
+            </div>  
+               
+            
+        }
+
+
+        <button className='Receivedbtn'>Received</button>
+      </Container>
+    </div>
+  );
+}
