@@ -534,10 +534,20 @@ margin-right: 30px;
   color: #fff;
   margin-left: 2%;
   padding-left: 250px;
-  padding-right: 270px;
+  padding-right: 250px;
   border-radius: 30px;
   position: relative;
   background-color:  rgba(153, 43, 0, 0.822);
+}
+.RefNoApproveTitle{
+  font-weight: 400;
+  color: #ffffff;
+  margin-left: 2%;
+  padding-left: 250px;
+  padding-right: 250px;
+  border-radius: 30px;
+  position: relative;
+  background-color:  rgba(0, 44, 95, 0.822);
 }
 .TitlependingItem{
   display: flex;
@@ -601,7 +611,7 @@ margin-right: 30px;
   color: #fff;
   margin-left: 2%;
   padding-left: 250px;
-  padding-right: 270px;
+  padding-right: 250px;
   border-radius: 30px;
   position: relative;
   background-color:  rgba(153, 10, 0, 0.822);

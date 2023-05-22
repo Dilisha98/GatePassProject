@@ -35,7 +35,7 @@ const ApprovedItemDetails = () => {
     
          <div className='TitleItem'>
                 <div className='ItemTitle'>Item Details</div>
-                <div className='RefNoTitle'>Ref.No :- 3423455</div>
+                <div className='RefNoApproveTitle'>Ref.No :- 3423455</div>
         </div>
           <form>
             <div className='grid-even-columns'>
